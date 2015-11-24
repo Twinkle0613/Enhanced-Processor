@@ -8,10 +8,10 @@ module DataPath(clk,clear,IRload,JMPmux,PCload,Meminst,MemWr,Asel,Aload,Sub,in,o
 	output Aeq0,Apos;
     output [4:0]MeminstOut;
     output [7:0]regAOut,RAMout;
-
+  wire [7:0]zero = 0;
 	InstructionCycleOperations ICO(clk,clear,IRload,PCload,JMPmux,Meminst,RAMout,MeminstOut,IR75);
 	RAM #(.n(8)) ramA(clk,MemWr,MeminstOut,regAOut,RAMout);
-	InstructionSetOperations #(.n(8)) ISO(RAMout,in,0,Asel,clk,Aload,clear,Sub,Aeq0,Apos,regAOut);
+	InstructionSetOperations #(.n(8)) ISO(RAMout,in,zero,Asel,clk,Aload,clear,Sub,Aeq0,Apos,regAOut);
 	
 
 endmodule 
