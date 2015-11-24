@@ -1,0 +1,14 @@
+
+State Machine - |CU|CurrState
+Name CurrState.halt CurrState.jpos CurrState.jz CurrState.Input CurrState.sub CurrState.add CurrState.store CurrState.load CurrState.decode CurrState.fetch CurrState.start 
+CurrState.start 0 0 0 0 0 0 0 0 0 0 0 
+CurrState.fetch 0 0 0 0 0 0 0 0 0 1 1 
+CurrState.decode 0 0 0 0 0 0 0 0 1 0 1 
+CurrState.load 0 0 0 0 0 0 0 1 0 0 1 
+CurrState.store 0 0 0 0 0 0 1 0 0 0 1 
+CurrState.add 0 0 0 0 0 1 0 0 0 0 1 
+CurrState.sub 0 0 0 0 1 0 0 0 0 0 1 
+CurrState.Input 0 0 0 1 0 0 0 0 0 0 1 
+CurrState.jz 0 0 1 0 0 0 0 0 0 0 1 
+CurrState.jpos 0 1 0 0 0 0 0 0 0 0 1 
+CurrState.halt 1 0 0 0 0 0 0 0 0 0 1 

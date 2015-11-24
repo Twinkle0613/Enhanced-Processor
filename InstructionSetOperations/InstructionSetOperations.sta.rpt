@@ -1,0 +1,1977 @@
+TimeQuest Timing Analyzer report for InstructionSetOperations
+Mon Nov 16 17:44:20 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Minimum Pulse Width: 'clk'
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Propagation Delay
+ 17. Minimum Propagation Delay
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Minimum Pulse Width: 'clk'
+ 24. Setup Times
+ 25. Hold Times
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Propagation Delay
+ 29. Minimum Propagation Delay
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Progagation Delay
+ 36. Minimum Progagation Delay
+ 37. Clock Transfers
+ 38. Report TCCS
+ 39. Report RSKM
+ 40. Unconstrained Paths
+ 41. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; InstructionSetOperations                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -11.407               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[4] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[4] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[5] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[5] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[6] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[6] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[7] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[3]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[3]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[4]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[4]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[5]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[5]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[6]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[6]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[7]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[7]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Asel[*]    ; clk        ; 6.480 ; 6.480 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; 6.179 ; 6.179 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; 6.480 ; 6.480 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; 4.748 ; 4.748 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; 4.514 ; 4.514 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; 4.748 ; 4.748 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; 3.454 ; 3.454 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; 3.426 ; 3.426 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; 4.368 ; 4.368 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; 3.818 ; 3.818 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; 8.827 ; 8.827 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; 8.827 ; 8.827 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; 8.407 ; 8.407 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; 8.213 ; 8.213 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; 8.264 ; 8.264 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; 8.611 ; 8.611 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; 7.744 ; 7.744 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; 7.655 ; 7.655 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; 5.255 ; 5.255 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; 5.105 ; 5.105 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; 4.478 ; 4.478 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; 5.255 ; 5.255 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; 4.515 ; 4.515 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; 4.482 ; 4.482 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; 4.432 ; 4.432 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; 5.063 ; 5.063 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; 4.108 ; 4.108 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; 7.877 ; 7.877 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; 7.854 ; 7.854 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; 7.877 ; 7.877 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; 7.834 ; 7.834 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; 7.216 ; 7.216 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; 7.806 ; 7.806 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; 6.860 ; 6.860 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; 7.200 ; 7.200 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; 6.391 ; 6.391 ; Rise       ; clk             ;
+; loadA      ; clk        ; 4.505 ; 4.505 ; Rise       ; clk             ;
+; sub        ; clk        ; 8.428 ; 8.428 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Asel[*]    ; clk        ; -3.656 ; -3.656 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; -4.008 ; -4.008 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; -3.656 ; -3.656 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; -3.178 ; -3.178 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; -4.266 ; -4.266 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; -4.500 ; -4.500 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; -3.206 ; -3.206 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; -3.178 ; -3.178 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; -3.643 ; -3.643 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; -4.120 ; -4.120 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; -3.570 ; -3.570 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; -3.806 ; -3.806 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; -3.943 ; -3.943 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; -3.943 ; -3.943 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; -4.410 ; -4.410 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; -4.109 ; -4.109 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; -5.594 ; -5.594 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; -4.146 ; -4.146 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; -6.236 ; -6.236 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; -4.387 ; -4.387 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; -4.233 ; -4.233 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; -3.860 ; -3.860 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; -4.857 ; -4.857 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; -4.230 ; -4.230 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; -5.007 ; -5.007 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; -4.267 ; -4.267 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; -4.234 ; -4.234 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; -4.184 ; -4.184 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; -4.815 ; -4.815 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; -3.860 ; -3.860 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; -5.785 ; -5.785 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; -6.473 ; -6.473 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; -6.280 ; -6.280 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; -6.691 ; -6.691 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; -5.785 ; -5.785 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; -6.310 ; -6.310 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; -6.446 ; -6.446 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; -6.765 ; -6.765 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; -6.143 ; -6.143 ; Rise       ; clk             ;
+; loadA      ; clk        ; -3.708 ; -3.708 ; Rise       ; clk             ;
+; sub        ; clk        ; -6.396 ; -6.396 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 9.137 ; 9.137 ; Rise       ; clk             ;
+; Apos        ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 7.730 ; 7.730 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 7.730 ; 7.730 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 7.159 ; 7.159 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 7.154 ; 7.154 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 6.955 ; 6.955 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 7.884 ; 7.884 ; Rise       ; clk             ;
+; Apos        ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 7.730 ; 7.730 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 7.159 ; 7.159 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 7.154 ; 7.154 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 6.955 ; 6.955 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; Asel[0]    ; MuxOut[0]   ; 11.805 ; 11.805 ; 11.805 ; 11.805 ;
+; Asel[0]    ; MuxOut[1]   ; 11.628 ; 11.628 ; 11.628 ; 11.628 ;
+; Asel[0]    ; MuxOut[2]   ; 12.797 ; 12.797 ; 12.797 ; 12.797 ;
+; Asel[0]    ; MuxOut[3]   ; 12.265 ; 12.265 ; 12.265 ; 12.265 ;
+; Asel[0]    ; MuxOut[4]   ; 12.267 ; 12.267 ; 12.267 ; 12.267 ;
+; Asel[0]    ; MuxOut[5]   ; 12.666 ; 12.666 ; 12.666 ; 12.666 ;
+; Asel[0]    ; MuxOut[6]   ; 11.561 ; 11.561 ; 11.561 ; 11.561 ;
+; Asel[0]    ; MuxOut[7]   ; 11.774 ; 11.774 ; 11.774 ; 11.774 ;
+; Asel[1]    ; MuxOut[0]   ; 11.839 ; 11.839 ; 11.839 ; 11.839 ;
+; Asel[1]    ; MuxOut[1]   ; 11.107 ; 11.107 ; 11.107 ; 11.107 ;
+; Asel[1]    ; MuxOut[2]   ; 12.444 ; 12.444 ; 12.444 ; 12.444 ;
+; Asel[1]    ; MuxOut[3]   ; 12.566 ; 12.566 ; 12.566 ; 12.566 ;
+; Asel[1]    ; MuxOut[4]   ; 12.108 ; 12.108 ; 12.108 ; 12.108 ;
+; Asel[1]    ; MuxOut[5]   ; 12.967 ; 12.967 ; 12.967 ; 12.967 ;
+; Asel[1]    ; MuxOut[6]   ; 11.011 ; 11.011 ; 11.011 ; 11.011 ;
+; Asel[1]    ; MuxOut[7]   ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
+; GND[0]     ; MuxOut[0]   ; 11.252 ;        ;        ; 11.252 ;
+; GND[1]     ; MuxOut[1]   ; 11.487 ;        ;        ; 11.487 ;
+; GND[2]     ; MuxOut[2]   ; 10.932 ;        ;        ; 10.932 ;
+; GND[3]     ; MuxOut[3]   ; 10.183 ;        ;        ; 10.183 ;
+; GND[4]     ; MuxOut[4]   ; 11.231 ;        ;        ; 11.231 ;
+; GND[5]     ; MuxOut[5]   ; 10.855 ;        ;        ; 10.855 ;
+; GND[6]     ; MuxOut[6]   ; 10.294 ;        ;        ; 10.294 ;
+; GND[7]     ; MuxOut[7]   ; 11.087 ;        ;        ; 11.087 ;
+; IROut[0]   ; MuxOut[0]   ; 14.428 ; 14.428 ; 14.428 ; 14.428 ;
+; IROut[0]   ; MuxOut[1]   ; 14.568 ; 14.568 ; 14.568 ; 14.568 ;
+; IROut[0]   ; MuxOut[2]   ; 16.056 ; 16.056 ; 16.056 ; 16.056 ;
+; IROut[0]   ; MuxOut[3]   ; 14.753 ; 14.753 ; 14.753 ; 14.753 ;
+; IROut[0]   ; MuxOut[4]   ; 15.272 ; 15.272 ; 15.272 ; 15.272 ;
+; IROut[0]   ; MuxOut[5]   ; 15.314 ; 15.314 ; 15.314 ; 15.314 ;
+; IROut[0]   ; MuxOut[6]   ; 15.014 ; 15.014 ; 15.014 ; 15.014 ;
+; IROut[0]   ; MuxOut[7]   ; 15.405 ; 15.405 ; 15.405 ; 15.405 ;
+; IROut[0]   ; SubOut[0]   ; 11.270 ; 11.270 ; 11.270 ; 11.270 ;
+; IROut[0]   ; SubOut[1]   ; 12.038 ; 12.038 ; 12.038 ; 12.038 ;
+; IROut[0]   ; SubOut[2]   ; 12.163 ; 12.163 ; 12.163 ; 12.163 ;
+; IROut[0]   ; SubOut[3]   ; 11.913 ; 11.913 ; 11.913 ; 11.913 ;
+; IROut[0]   ; SubOut[4]   ; 12.202 ; 12.202 ; 12.202 ; 12.202 ;
+; IROut[0]   ; SubOut[5]   ; 12.035 ; 12.035 ; 12.035 ; 12.035 ;
+; IROut[0]   ; SubOut[6]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; IROut[0]   ; SubOut[7]   ; 12.184 ; 12.184 ; 12.184 ; 12.184 ;
+; IROut[1]   ; MuxOut[1]   ; 13.796 ; 13.796 ; 13.796 ; 13.796 ;
+; IROut[1]   ; MuxOut[2]   ; 15.636 ; 15.636 ; 15.636 ; 15.636 ;
+; IROut[1]   ; MuxOut[3]   ; 14.333 ; 14.333 ; 14.333 ; 14.333 ;
+; IROut[1]   ; MuxOut[4]   ; 14.852 ; 14.852 ; 14.852 ; 14.852 ;
+; IROut[1]   ; MuxOut[5]   ; 14.894 ; 14.894 ; 14.894 ; 14.894 ;
+; IROut[1]   ; MuxOut[6]   ; 14.594 ; 14.594 ; 14.594 ; 14.594 ;
+; IROut[1]   ; MuxOut[7]   ; 14.985 ; 14.985 ; 14.985 ; 14.985 ;
+; IROut[1]   ; SubOut[1]   ; 11.266 ; 11.266 ; 11.266 ; 11.266 ;
+; IROut[1]   ; SubOut[2]   ; 11.743 ; 11.743 ; 11.743 ; 11.743 ;
+; IROut[1]   ; SubOut[3]   ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; IROut[1]   ; SubOut[4]   ; 11.782 ; 11.782 ; 11.782 ; 11.782 ;
+; IROut[1]   ; SubOut[5]   ; 11.615 ; 11.615 ; 11.615 ; 11.615 ;
+; IROut[1]   ; SubOut[6]   ; 11.780 ; 11.780 ; 11.780 ; 11.780 ;
+; IROut[1]   ; SubOut[7]   ; 11.764 ; 11.764 ; 11.764 ; 11.764 ;
+; IROut[2]   ; MuxOut[2]   ; 15.078 ; 15.078 ; 15.078 ; 15.078 ;
+; IROut[2]   ; MuxOut[3]   ; 14.139 ; 14.139 ; 14.139 ; 14.139 ;
+; IROut[2]   ; MuxOut[4]   ; 14.658 ; 14.658 ; 14.658 ; 14.658 ;
+; IROut[2]   ; MuxOut[5]   ; 14.700 ; 14.700 ; 14.700 ; 14.700 ;
+; IROut[2]   ; MuxOut[6]   ; 14.400 ; 14.400 ; 14.400 ; 14.400 ;
+; IROut[2]   ; MuxOut[7]   ; 14.791 ; 14.791 ; 14.791 ; 14.791 ;
+; IROut[2]   ; SubOut[2]   ; 11.185 ; 11.185 ; 11.185 ; 11.185 ;
+; IROut[2]   ; SubOut[3]   ; 11.299 ; 11.299 ; 11.299 ; 11.299 ;
+; IROut[2]   ; SubOut[4]   ; 11.588 ; 11.588 ; 11.588 ; 11.588 ;
+; IROut[2]   ; SubOut[5]   ; 11.421 ; 11.421 ; 11.421 ; 11.421 ;
+; IROut[2]   ; SubOut[6]   ; 11.586 ; 11.586 ; 11.586 ; 11.586 ;
+; IROut[2]   ; SubOut[7]   ; 11.570 ; 11.570 ; 11.570 ; 11.570 ;
+; IROut[3]   ; MuxOut[3]   ; 13.839 ; 13.839 ; 13.839 ; 13.839 ;
+; IROut[3]   ; MuxOut[4]   ; 14.709 ; 14.709 ; 14.709 ; 14.709 ;
+; IROut[3]   ; MuxOut[5]   ; 14.751 ; 14.751 ; 14.751 ; 14.751 ;
+; IROut[3]   ; MuxOut[6]   ; 14.451 ; 14.451 ; 14.451 ; 14.451 ;
+; IROut[3]   ; MuxOut[7]   ; 14.842 ; 14.842 ; 14.842 ; 14.842 ;
+; IROut[3]   ; SubOut[3]   ; 10.999 ; 10.999 ; 10.999 ; 10.999 ;
+; IROut[3]   ; SubOut[4]   ; 11.639 ; 11.639 ; 11.639 ; 11.639 ;
+; IROut[3]   ; SubOut[5]   ; 11.472 ; 11.472 ; 11.472 ; 11.472 ;
+; IROut[3]   ; SubOut[6]   ; 11.637 ; 11.637 ; 11.637 ; 11.637 ;
+; IROut[3]   ; SubOut[7]   ; 11.621 ; 11.621 ; 11.621 ; 11.621 ;
+; IROut[4]   ; MuxOut[4]   ; 14.699 ; 14.699 ; 14.699 ; 14.699 ;
+; IROut[4]   ; MuxOut[5]   ; 15.098 ; 15.098 ; 15.098 ; 15.098 ;
+; IROut[4]   ; MuxOut[6]   ; 14.798 ; 14.798 ; 14.798 ; 14.798 ;
+; IROut[4]   ; MuxOut[7]   ; 15.189 ; 15.189 ; 15.189 ; 15.189 ;
+; IROut[4]   ; SubOut[4]   ; 11.629 ; 11.629 ; 11.629 ; 11.629 ;
+; IROut[4]   ; SubOut[5]   ; 11.819 ; 11.819 ; 11.819 ; 11.819 ;
+; IROut[4]   ; SubOut[6]   ; 11.984 ; 11.984 ; 11.984 ; 11.984 ;
+; IROut[4]   ; SubOut[7]   ; 11.968 ; 11.968 ; 11.968 ; 11.968 ;
+; IROut[5]   ; MuxOut[5]   ; 14.168 ; 14.168 ; 14.168 ; 14.168 ;
+; IROut[5]   ; MuxOut[6]   ; 14.220 ; 14.220 ; 14.220 ; 14.220 ;
+; IROut[5]   ; MuxOut[7]   ; 14.611 ; 14.611 ; 14.611 ; 14.611 ;
+; IROut[5]   ; SubOut[5]   ; 10.889 ; 10.889 ; 10.889 ; 10.889 ;
+; IROut[5]   ; SubOut[6]   ; 11.406 ; 11.406 ; 11.406 ; 11.406 ;
+; IROut[5]   ; SubOut[7]   ; 11.390 ; 11.390 ; 11.390 ; 11.390 ;
+; IROut[6]   ; MuxOut[6]   ; 13.940 ; 13.940 ; 13.940 ; 13.940 ;
+; IROut[6]   ; MuxOut[7]   ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
+; IROut[6]   ; SubOut[6]   ; 11.126 ; 11.126 ; 11.126 ; 11.126 ;
+; IROut[6]   ; SubOut[7]   ; 11.467 ; 11.467 ; 11.467 ; 11.467 ;
+; IROut[7]   ; MuxOut[7]   ; 13.927 ; 13.927 ; 13.927 ; 13.927 ;
+; IROut[7]   ; SubOut[7]   ; 10.706 ; 10.706 ; 10.706 ; 10.706 ;
+; Input[0]   ; MuxOut[0]   ; 11.843 ; 11.843 ; 11.843 ; 11.843 ;
+; Input[1]   ; MuxOut[1]   ; 11.217 ;        ;        ; 11.217 ;
+; Input[2]   ; MuxOut[2]   ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; Input[3]   ; MuxOut[3]   ; 11.272 ;        ;        ; 11.272 ;
+; Input[4]   ; MuxOut[4]   ; 11.822 ; 11.822 ; 11.822 ; 11.822 ;
+; Input[5]   ; MuxOut[5]   ; 10.919 ;        ;        ; 10.919 ;
+; Input[6]   ; MuxOut[6]   ; 11.539 ; 11.539 ; 11.539 ; 11.539 ;
+; Input[7]   ; MuxOut[7]   ; 11.141 ;        ;        ; 11.141 ;
+; RAMout[0]  ; MuxOut[0]   ; 13.459 ; 13.459 ; 13.459 ; 13.459 ;
+; RAMout[0]  ; MuxOut[1]   ; 13.595 ; 13.595 ; 13.595 ; 13.595 ;
+; RAMout[0]  ; MuxOut[2]   ; 15.083 ; 15.083 ; 15.083 ; 15.083 ;
+; RAMout[0]  ; MuxOut[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; RAMout[0]  ; MuxOut[4]   ; 14.299 ; 14.299 ; 14.299 ; 14.299 ;
+; RAMout[0]  ; MuxOut[5]   ; 14.341 ; 14.341 ; 14.341 ; 14.341 ;
+; RAMout[0]  ; MuxOut[6]   ; 14.041 ; 14.041 ; 14.041 ; 14.041 ;
+; RAMout[0]  ; MuxOut[7]   ; 14.432 ; 14.432 ; 14.432 ; 14.432 ;
+; RAMout[0]  ; SubOut[0]   ; 10.301 ; 10.301 ; 10.301 ; 10.301 ;
+; RAMout[0]  ; SubOut[1]   ; 11.065 ; 11.065 ; 11.065 ; 11.065 ;
+; RAMout[0]  ; SubOut[2]   ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; RAMout[0]  ; SubOut[3]   ; 10.940 ; 10.940 ; 10.940 ; 10.940 ;
+; RAMout[0]  ; SubOut[4]   ; 11.229 ; 11.229 ; 11.229 ; 11.229 ;
+; RAMout[0]  ; SubOut[5]   ; 11.062 ; 11.062 ; 11.062 ; 11.062 ;
+; RAMout[0]  ; SubOut[6]   ; 11.227 ; 11.227 ; 11.227 ; 11.227 ;
+; RAMout[0]  ; SubOut[7]   ; 11.211 ; 11.211 ; 11.211 ; 11.211 ;
+; RAMout[1]  ; MuxOut[1]   ; 13.267 ; 13.267 ; 13.267 ; 13.267 ;
+; RAMout[1]  ; MuxOut[2]   ; 15.106 ; 15.106 ; 15.106 ; 15.106 ;
+; RAMout[1]  ; MuxOut[3]   ; 13.803 ; 13.803 ; 13.803 ; 13.803 ;
+; RAMout[1]  ; MuxOut[4]   ; 14.322 ; 14.322 ; 14.322 ; 14.322 ;
+; RAMout[1]  ; MuxOut[5]   ; 14.364 ; 14.364 ; 14.364 ; 14.364 ;
+; RAMout[1]  ; MuxOut[6]   ; 14.064 ; 14.064 ; 14.064 ; 14.064 ;
+; RAMout[1]  ; MuxOut[7]   ; 14.455 ; 14.455 ; 14.455 ; 14.455 ;
+; RAMout[1]  ; SubOut[1]   ; 10.737 ; 10.737 ; 10.737 ; 10.737 ;
+; RAMout[1]  ; SubOut[2]   ; 11.213 ; 11.213 ; 11.213 ; 11.213 ;
+; RAMout[1]  ; SubOut[3]   ; 10.963 ; 10.963 ; 10.963 ; 10.963 ;
+; RAMout[1]  ; SubOut[4]   ; 11.252 ; 11.252 ; 11.252 ; 11.252 ;
+; RAMout[1]  ; SubOut[5]   ; 11.085 ; 11.085 ; 11.085 ; 11.085 ;
+; RAMout[1]  ; SubOut[6]   ; 11.250 ; 11.250 ; 11.250 ; 11.250 ;
+; RAMout[1]  ; SubOut[7]   ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
+; RAMout[2]  ; MuxOut[2]   ; 14.701 ; 14.701 ; 14.701 ; 14.701 ;
+; RAMout[2]  ; MuxOut[3]   ; 13.760 ; 13.760 ; 13.760 ; 13.760 ;
+; RAMout[2]  ; MuxOut[4]   ; 14.279 ; 14.279 ; 14.279 ; 14.279 ;
+; RAMout[2]  ; MuxOut[5]   ; 14.321 ; 14.321 ; 14.321 ; 14.321 ;
+; RAMout[2]  ; MuxOut[6]   ; 14.021 ; 14.021 ; 14.021 ; 14.021 ;
+; RAMout[2]  ; MuxOut[7]   ; 14.412 ; 14.412 ; 14.412 ; 14.412 ;
+; RAMout[2]  ; SubOut[2]   ; 10.808 ; 10.808 ; 10.808 ; 10.808 ;
+; RAMout[2]  ; SubOut[3]   ; 10.920 ; 10.920 ; 10.920 ; 10.920 ;
+; RAMout[2]  ; SubOut[4]   ; 11.209 ; 11.209 ; 11.209 ; 11.209 ;
+; RAMout[2]  ; SubOut[5]   ; 11.042 ; 11.042 ; 11.042 ; 11.042 ;
+; RAMout[2]  ; SubOut[6]   ; 11.207 ; 11.207 ; 11.207 ; 11.207 ;
+; RAMout[2]  ; SubOut[7]   ; 11.191 ; 11.191 ; 11.191 ; 11.191 ;
+; RAMout[3]  ; MuxOut[3]   ; 12.790 ; 12.790 ; 12.790 ; 12.790 ;
+; RAMout[3]  ; MuxOut[4]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; RAMout[3]  ; MuxOut[5]   ; 13.703 ; 13.703 ; 13.703 ; 13.703 ;
+; RAMout[3]  ; MuxOut[6]   ; 13.403 ; 13.403 ; 13.403 ; 13.403 ;
+; RAMout[3]  ; MuxOut[7]   ; 13.794 ; 13.794 ; 13.794 ; 13.794 ;
+; RAMout[3]  ; SubOut[3]   ; 9.950  ; 9.950  ; 9.950  ; 9.950  ;
+; RAMout[3]  ; SubOut[4]   ; 10.591 ; 10.591 ; 10.591 ; 10.591 ;
+; RAMout[3]  ; SubOut[5]   ; 10.424 ; 10.424 ; 10.424 ; 10.424 ;
+; RAMout[3]  ; SubOut[6]   ; 10.589 ; 10.589 ; 10.589 ; 10.589 ;
+; RAMout[3]  ; SubOut[7]   ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; RAMout[4]  ; MuxOut[4]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; RAMout[4]  ; MuxOut[5]   ; 14.293 ; 14.293 ; 14.293 ; 14.293 ;
+; RAMout[4]  ; MuxOut[6]   ; 13.993 ; 13.993 ; 13.993 ; 13.993 ;
+; RAMout[4]  ; MuxOut[7]   ; 14.384 ; 14.384 ; 14.384 ; 14.384 ;
+; RAMout[4]  ; SubOut[4]   ; 10.828 ; 10.828 ; 10.828 ; 10.828 ;
+; RAMout[4]  ; SubOut[5]   ; 11.014 ; 11.014 ; 11.014 ; 11.014 ;
+; RAMout[4]  ; SubOut[6]   ; 11.179 ; 11.179 ; 11.179 ; 11.179 ;
+; RAMout[4]  ; SubOut[7]   ; 11.163 ; 11.163 ; 11.163 ; 11.163 ;
+; RAMout[5]  ; MuxOut[5]   ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; RAMout[5]  ; MuxOut[6]   ; 13.336 ; 13.336 ; 13.336 ; 13.336 ;
+; RAMout[5]  ; MuxOut[7]   ; 13.727 ; 13.727 ; 13.727 ; 13.727 ;
+; RAMout[5]  ; SubOut[5]   ; 10.006 ; 10.006 ; 10.006 ; 10.006 ;
+; RAMout[5]  ; SubOut[6]   ; 10.522 ; 10.522 ; 10.522 ; 10.522 ;
+; RAMout[5]  ; SubOut[7]   ; 10.506 ; 10.506 ; 10.506 ; 10.506 ;
+; RAMout[6]  ; MuxOut[6]   ; 13.489 ; 13.489 ; 13.489 ; 13.489 ;
+; RAMout[6]  ; MuxOut[7]   ; 14.233 ; 14.233 ; 14.233 ; 14.233 ;
+; RAMout[6]  ; SubOut[6]   ; 10.675 ; 10.675 ; 10.675 ; 10.675 ;
+; RAMout[6]  ; SubOut[7]   ; 11.012 ; 11.012 ; 11.012 ; 11.012 ;
+; RAMout[7]  ; MuxOut[7]   ; 13.424 ; 13.424 ; 13.424 ; 13.424 ;
+; RAMout[7]  ; SubOut[7]   ; 10.203 ; 10.203 ; 10.203 ; 10.203 ;
+; sub        ; MuxOut[0]   ; 13.731 ; 13.731 ; 13.731 ; 13.731 ;
+; sub        ; MuxOut[1]   ; 13.869 ; 13.869 ; 13.869 ; 13.869 ;
+; sub        ; MuxOut[2]   ; 15.657 ; 15.657 ; 15.657 ; 15.657 ;
+; sub        ; MuxOut[3]   ; 14.354 ; 14.354 ; 14.354 ; 14.354 ;
+; sub        ; MuxOut[4]   ; 14.873 ; 14.873 ; 14.873 ; 14.873 ;
+; sub        ; MuxOut[5]   ; 14.915 ; 14.915 ; 14.915 ; 14.915 ;
+; sub        ; MuxOut[6]   ; 14.615 ; 14.615 ; 14.615 ; 14.615 ;
+; sub        ; MuxOut[7]   ; 15.006 ; 15.006 ; 15.006 ; 15.006 ;
+; sub        ; SubOut[0]   ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; sub        ; SubOut[1]   ; 11.339 ; 11.339 ; 11.339 ; 11.339 ;
+; sub        ; SubOut[2]   ; 11.764 ; 11.764 ; 11.764 ; 11.764 ;
+; sub        ; SubOut[3]   ; 11.514 ; 11.514 ; 11.514 ; 11.514 ;
+; sub        ; SubOut[4]   ; 11.803 ; 11.803 ; 11.803 ; 11.803 ;
+; sub        ; SubOut[5]   ; 11.636 ; 11.636 ; 11.636 ; 11.636 ;
+; sub        ; SubOut[6]   ; 11.801 ; 11.801 ; 11.801 ; 11.801 ;
+; sub        ; SubOut[7]   ; 11.785 ; 11.785 ; 11.785 ; 11.785 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; Asel[0]    ; MuxOut[0]   ; 11.805 ; 11.805 ; 11.805 ; 11.805 ;
+; Asel[0]    ; MuxOut[1]   ; 11.200 ; 11.200 ; 11.200 ; 11.200 ;
+; Asel[0]    ; MuxOut[2]   ; 12.797 ; 12.797 ; 12.797 ; 12.797 ;
+; Asel[0]    ; MuxOut[3]   ; 11.219 ; 11.219 ; 11.219 ; 11.219 ;
+; Asel[0]    ; MuxOut[4]   ; 12.267 ; 12.267 ; 12.267 ; 12.267 ;
+; Asel[0]    ; MuxOut[5]   ; 10.915 ; 10.915 ; 10.915 ; 10.915 ;
+; Asel[0]    ; MuxOut[6]   ; 11.561 ; 11.561 ; 11.561 ; 11.561 ;
+; Asel[0]    ; MuxOut[7]   ; 11.289 ; 11.289 ; 11.289 ; 11.289 ;
+; Asel[1]    ; MuxOut[0]   ; 10.642 ; 10.642 ; 10.642 ; 10.642 ;
+; Asel[1]    ; MuxOut[1]   ; 11.107 ; 11.107 ; 11.107 ; 11.107 ;
+; Asel[1]    ; MuxOut[2]   ; 11.782 ; 11.782 ; 11.782 ; 11.782 ;
+; Asel[1]    ; MuxOut[3]   ; 12.566 ; 12.566 ; 12.566 ; 12.566 ;
+; Asel[1]    ; MuxOut[4]   ; 11.644 ; 11.644 ; 11.644 ; 11.644 ;
+; Asel[1]    ; MuxOut[5]   ; 12.967 ; 12.967 ; 12.967 ; 12.967 ;
+; Asel[1]    ; MuxOut[6]   ; 10.382 ; 10.382 ; 10.382 ; 10.382 ;
+; Asel[1]    ; MuxOut[7]   ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
+; GND[0]     ; MuxOut[0]   ; 11.252 ;        ;        ; 11.252 ;
+; GND[1]     ; MuxOut[1]   ; 11.487 ;        ;        ; 11.487 ;
+; GND[2]     ; MuxOut[2]   ; 10.932 ;        ;        ; 10.932 ;
+; GND[3]     ; MuxOut[3]   ; 10.183 ;        ;        ; 10.183 ;
+; GND[4]     ; MuxOut[4]   ; 11.231 ;        ;        ; 11.231 ;
+; GND[5]     ; MuxOut[5]   ; 10.855 ;        ;        ; 10.855 ;
+; GND[6]     ; MuxOut[6]   ; 10.294 ;        ;        ; 10.294 ;
+; GND[7]     ; MuxOut[7]   ; 11.087 ;        ;        ; 11.087 ;
+; IROut[0]   ; MuxOut[0]   ; 10.929 ; 14.428 ; 14.428 ; 10.929 ;
+; IROut[0]   ; MuxOut[1]   ; 14.568 ; 14.568 ; 14.568 ; 14.568 ;
+; IROut[0]   ; MuxOut[2]   ; 16.056 ; 16.056 ; 16.056 ; 16.056 ;
+; IROut[0]   ; MuxOut[3]   ; 14.753 ; 14.753 ; 14.753 ; 14.753 ;
+; IROut[0]   ; MuxOut[4]   ; 15.272 ; 15.272 ; 15.272 ; 15.272 ;
+; IROut[0]   ; MuxOut[5]   ; 15.314 ; 15.314 ; 15.314 ; 15.314 ;
+; IROut[0]   ; MuxOut[6]   ; 15.014 ; 15.014 ; 15.014 ; 15.014 ;
+; IROut[0]   ; MuxOut[7]   ; 15.405 ; 15.405 ; 15.405 ; 15.405 ;
+; IROut[0]   ; SubOut[0]   ; 11.270 ; 11.270 ; 11.270 ; 11.270 ;
+; IROut[0]   ; SubOut[1]   ; 12.038 ; 12.038 ; 12.038 ; 12.038 ;
+; IROut[0]   ; SubOut[2]   ; 12.163 ; 12.163 ; 12.163 ; 12.163 ;
+; IROut[0]   ; SubOut[3]   ; 11.913 ; 11.913 ; 11.913 ; 11.913 ;
+; IROut[0]   ; SubOut[4]   ; 12.202 ; 12.202 ; 12.202 ; 12.202 ;
+; IROut[0]   ; SubOut[5]   ; 12.035 ; 12.035 ; 12.035 ; 12.035 ;
+; IROut[0]   ; SubOut[6]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; IROut[0]   ; SubOut[7]   ; 12.184 ; 12.184 ; 12.184 ; 12.184 ;
+; IROut[1]   ; MuxOut[1]   ; 11.397 ; 11.397 ; 11.397 ; 11.397 ;
+; IROut[1]   ; MuxOut[2]   ; 15.636 ; 15.636 ; 15.636 ; 15.636 ;
+; IROut[1]   ; MuxOut[3]   ; 14.333 ; 14.333 ; 14.333 ; 14.333 ;
+; IROut[1]   ; MuxOut[4]   ; 14.852 ; 14.852 ; 14.852 ; 14.852 ;
+; IROut[1]   ; MuxOut[5]   ; 14.894 ; 14.894 ; 14.894 ; 14.894 ;
+; IROut[1]   ; MuxOut[6]   ; 14.594 ; 14.594 ; 14.594 ; 14.594 ;
+; IROut[1]   ; MuxOut[7]   ; 14.985 ; 14.985 ; 14.985 ; 14.985 ;
+; IROut[1]   ; SubOut[1]   ; 11.266 ; 11.266 ; 11.266 ; 11.266 ;
+; IROut[1]   ; SubOut[2]   ; 11.743 ; 11.743 ; 11.743 ; 11.743 ;
+; IROut[1]   ; SubOut[3]   ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; IROut[1]   ; SubOut[4]   ; 11.782 ; 11.782 ; 11.782 ; 11.782 ;
+; IROut[1]   ; SubOut[5]   ; 11.615 ; 11.615 ; 11.615 ; 11.615 ;
+; IROut[1]   ; SubOut[6]   ; 11.780 ; 11.780 ; 11.780 ; 11.780 ;
+; IROut[1]   ; SubOut[7]   ; 11.764 ; 11.764 ; 11.764 ; 11.764 ;
+; IROut[2]   ; MuxOut[2]   ; 11.835 ; 15.078 ; 15.078 ; 11.835 ;
+; IROut[2]   ; MuxOut[3]   ; 14.139 ; 14.139 ; 14.139 ; 14.139 ;
+; IROut[2]   ; MuxOut[4]   ; 14.658 ; 14.658 ; 14.658 ; 14.658 ;
+; IROut[2]   ; MuxOut[5]   ; 14.700 ; 14.700 ; 14.700 ; 14.700 ;
+; IROut[2]   ; MuxOut[6]   ; 14.400 ; 14.400 ; 14.400 ; 14.400 ;
+; IROut[2]   ; MuxOut[7]   ; 14.791 ; 14.791 ; 14.791 ; 14.791 ;
+; IROut[2]   ; SubOut[2]   ; 11.185 ; 11.185 ; 11.185 ; 11.185 ;
+; IROut[2]   ; SubOut[3]   ; 11.299 ; 11.299 ; 11.299 ; 11.299 ;
+; IROut[2]   ; SubOut[4]   ; 11.588 ; 11.588 ; 11.588 ; 11.588 ;
+; IROut[2]   ; SubOut[5]   ; 11.421 ; 11.421 ; 11.421 ; 11.421 ;
+; IROut[2]   ; SubOut[6]   ; 11.586 ; 11.586 ; 11.586 ; 11.586 ;
+; IROut[2]   ; SubOut[7]   ; 11.570 ; 11.570 ; 11.570 ; 11.570 ;
+; IROut[3]   ; MuxOut[3]   ; 12.599 ; 12.599 ; 12.599 ; 12.599 ;
+; IROut[3]   ; MuxOut[4]   ; 14.709 ; 14.709 ; 14.709 ; 14.709 ;
+; IROut[3]   ; MuxOut[5]   ; 14.751 ; 14.751 ; 14.751 ; 14.751 ;
+; IROut[3]   ; MuxOut[6]   ; 14.451 ; 14.451 ; 14.451 ; 14.451 ;
+; IROut[3]   ; MuxOut[7]   ; 14.842 ; 14.842 ; 14.842 ; 14.842 ;
+; IROut[3]   ; SubOut[3]   ; 10.999 ; 10.999 ; 10.999 ; 10.999 ;
+; IROut[3]   ; SubOut[4]   ; 11.639 ; 11.639 ; 11.639 ; 11.639 ;
+; IROut[3]   ; SubOut[5]   ; 11.472 ; 11.472 ; 11.472 ; 11.472 ;
+; IROut[3]   ; SubOut[6]   ; 11.637 ; 11.637 ; 11.637 ; 11.637 ;
+; IROut[3]   ; SubOut[7]   ; 11.621 ; 11.621 ; 11.621 ; 11.621 ;
+; IROut[4]   ; MuxOut[4]   ; 11.734 ; 14.699 ; 14.699 ; 11.734 ;
+; IROut[4]   ; MuxOut[5]   ; 15.098 ; 15.098 ; 15.098 ; 15.098 ;
+; IROut[4]   ; MuxOut[6]   ; 14.798 ; 14.798 ; 14.798 ; 14.798 ;
+; IROut[4]   ; MuxOut[7]   ; 15.189 ; 15.189 ; 15.189 ; 15.189 ;
+; IROut[4]   ; SubOut[4]   ; 11.629 ; 11.629 ; 11.629 ; 11.629 ;
+; IROut[4]   ; SubOut[5]   ; 11.819 ; 11.819 ; 11.819 ; 11.819 ;
+; IROut[4]   ; SubOut[6]   ; 11.984 ; 11.984 ; 11.984 ; 11.984 ;
+; IROut[4]   ; SubOut[7]   ; 11.968 ; 11.968 ; 11.968 ; 11.968 ;
+; IROut[5]   ; MuxOut[5]   ; 12.971 ; 12.971 ; 12.971 ; 12.971 ;
+; IROut[5]   ; MuxOut[6]   ; 14.220 ; 14.220 ; 14.220 ; 14.220 ;
+; IROut[5]   ; MuxOut[7]   ; 14.611 ; 14.611 ; 14.611 ; 14.611 ;
+; IROut[5]   ; SubOut[5]   ; 10.889 ; 10.889 ; 10.889 ; 10.889 ;
+; IROut[5]   ; SubOut[6]   ; 11.406 ; 11.406 ; 11.406 ; 11.406 ;
+; IROut[5]   ; SubOut[7]   ; 11.390 ; 11.390 ; 11.390 ; 11.390 ;
+; IROut[6]   ; MuxOut[6]   ; 11.111 ; 13.940 ; 13.940 ; 11.111 ;
+; IROut[6]   ; MuxOut[7]   ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
+; IROut[6]   ; SubOut[6]   ; 11.126 ; 11.126 ; 11.126 ; 11.126 ;
+; IROut[6]   ; SubOut[7]   ; 11.467 ; 11.467 ; 11.467 ; 11.467 ;
+; IROut[7]   ; MuxOut[7]   ; 11.514 ; 11.514 ; 11.514 ; 11.514 ;
+; IROut[7]   ; SubOut[7]   ; 10.706 ; 10.706 ; 10.706 ; 10.706 ;
+; Input[0]   ; MuxOut[0]   ; 11.843 ; 11.843 ; 11.843 ; 11.843 ;
+; Input[1]   ; MuxOut[1]   ; 11.217 ;        ;        ; 11.217 ;
+; Input[2]   ; MuxOut[2]   ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; Input[3]   ; MuxOut[3]   ; 11.272 ;        ;        ; 11.272 ;
+; Input[4]   ; MuxOut[4]   ; 11.822 ; 11.822 ; 11.822 ; 11.822 ;
+; Input[5]   ; MuxOut[5]   ; 10.919 ;        ;        ; 10.919 ;
+; Input[6]   ; MuxOut[6]   ; 11.539 ; 11.539 ; 11.539 ; 11.539 ;
+; Input[7]   ; MuxOut[7]   ; 11.141 ;        ;        ; 11.141 ;
+; RAMout[0]  ; MuxOut[0]   ; 13.459 ; 13.459 ; 13.459 ; 13.459 ;
+; RAMout[0]  ; MuxOut[1]   ; 13.595 ; 13.595 ; 13.595 ; 13.595 ;
+; RAMout[0]  ; MuxOut[2]   ; 15.083 ; 15.083 ; 15.083 ; 15.083 ;
+; RAMout[0]  ; MuxOut[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; RAMout[0]  ; MuxOut[4]   ; 14.299 ; 14.299 ; 14.299 ; 14.299 ;
+; RAMout[0]  ; MuxOut[5]   ; 14.341 ; 14.341 ; 14.341 ; 14.341 ;
+; RAMout[0]  ; MuxOut[6]   ; 14.041 ; 14.041 ; 14.041 ; 14.041 ;
+; RAMout[0]  ; MuxOut[7]   ; 14.432 ; 14.432 ; 14.432 ; 14.432 ;
+; RAMout[0]  ; SubOut[0]   ; 10.301 ; 10.301 ; 10.301 ; 10.301 ;
+; RAMout[0]  ; SubOut[1]   ; 11.065 ; 11.065 ; 11.065 ; 11.065 ;
+; RAMout[0]  ; SubOut[2]   ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; RAMout[0]  ; SubOut[3]   ; 10.940 ; 10.940 ; 10.940 ; 10.940 ;
+; RAMout[0]  ; SubOut[4]   ; 11.229 ; 11.229 ; 11.229 ; 11.229 ;
+; RAMout[0]  ; SubOut[5]   ; 11.062 ; 11.062 ; 11.062 ; 11.062 ;
+; RAMout[0]  ; SubOut[6]   ; 11.227 ; 11.227 ; 11.227 ; 11.227 ;
+; RAMout[0]  ; SubOut[7]   ; 11.211 ; 11.211 ; 11.211 ; 11.211 ;
+; RAMout[1]  ; MuxOut[1]   ; 13.267 ; 13.267 ; 13.267 ; 13.267 ;
+; RAMout[1]  ; MuxOut[2]   ; 15.106 ; 15.106 ; 15.106 ; 15.106 ;
+; RAMout[1]  ; MuxOut[3]   ; 13.803 ; 13.803 ; 13.803 ; 13.803 ;
+; RAMout[1]  ; MuxOut[4]   ; 14.322 ; 14.322 ; 14.322 ; 14.322 ;
+; RAMout[1]  ; MuxOut[5]   ; 14.364 ; 14.364 ; 14.364 ; 14.364 ;
+; RAMout[1]  ; MuxOut[6]   ; 14.064 ; 14.064 ; 14.064 ; 14.064 ;
+; RAMout[1]  ; MuxOut[7]   ; 14.455 ; 14.455 ; 14.455 ; 14.455 ;
+; RAMout[1]  ; SubOut[1]   ; 10.737 ; 10.737 ; 10.737 ; 10.737 ;
+; RAMout[1]  ; SubOut[2]   ; 11.213 ; 11.213 ; 11.213 ; 11.213 ;
+; RAMout[1]  ; SubOut[3]   ; 10.963 ; 10.963 ; 10.963 ; 10.963 ;
+; RAMout[1]  ; SubOut[4]   ; 11.252 ; 11.252 ; 11.252 ; 11.252 ;
+; RAMout[1]  ; SubOut[5]   ; 11.085 ; 11.085 ; 11.085 ; 11.085 ;
+; RAMout[1]  ; SubOut[6]   ; 11.250 ; 11.250 ; 11.250 ; 11.250 ;
+; RAMout[1]  ; SubOut[7]   ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
+; RAMout[2]  ; MuxOut[2]   ; 14.701 ; 14.701 ; 14.701 ; 14.701 ;
+; RAMout[2]  ; MuxOut[3]   ; 13.760 ; 13.760 ; 13.760 ; 13.760 ;
+; RAMout[2]  ; MuxOut[4]   ; 14.279 ; 14.279 ; 14.279 ; 14.279 ;
+; RAMout[2]  ; MuxOut[5]   ; 14.321 ; 14.321 ; 14.321 ; 14.321 ;
+; RAMout[2]  ; MuxOut[6]   ; 14.021 ; 14.021 ; 14.021 ; 14.021 ;
+; RAMout[2]  ; MuxOut[7]   ; 14.412 ; 14.412 ; 14.412 ; 14.412 ;
+; RAMout[2]  ; SubOut[2]   ; 10.808 ; 10.808 ; 10.808 ; 10.808 ;
+; RAMout[2]  ; SubOut[3]   ; 10.920 ; 10.920 ; 10.920 ; 10.920 ;
+; RAMout[2]  ; SubOut[4]   ; 11.209 ; 11.209 ; 11.209 ; 11.209 ;
+; RAMout[2]  ; SubOut[5]   ; 11.042 ; 11.042 ; 11.042 ; 11.042 ;
+; RAMout[2]  ; SubOut[6]   ; 11.207 ; 11.207 ; 11.207 ; 11.207 ;
+; RAMout[2]  ; SubOut[7]   ; 11.191 ; 11.191 ; 11.191 ; 11.191 ;
+; RAMout[3]  ; MuxOut[3]   ; 12.790 ; 12.790 ; 12.790 ; 12.790 ;
+; RAMout[3]  ; MuxOut[4]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; RAMout[3]  ; MuxOut[5]   ; 13.703 ; 13.703 ; 13.703 ; 13.703 ;
+; RAMout[3]  ; MuxOut[6]   ; 13.403 ; 13.403 ; 13.403 ; 13.403 ;
+; RAMout[3]  ; MuxOut[7]   ; 13.794 ; 13.794 ; 13.794 ; 13.794 ;
+; RAMout[3]  ; SubOut[3]   ; 9.950  ; 9.950  ; 9.950  ; 9.950  ;
+; RAMout[3]  ; SubOut[4]   ; 10.591 ; 10.591 ; 10.591 ; 10.591 ;
+; RAMout[3]  ; SubOut[5]   ; 10.424 ; 10.424 ; 10.424 ; 10.424 ;
+; RAMout[3]  ; SubOut[6]   ; 10.589 ; 10.589 ; 10.589 ; 10.589 ;
+; RAMout[3]  ; SubOut[7]   ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; RAMout[4]  ; MuxOut[4]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; RAMout[4]  ; MuxOut[5]   ; 14.293 ; 14.293 ; 14.293 ; 14.293 ;
+; RAMout[4]  ; MuxOut[6]   ; 13.993 ; 13.993 ; 13.993 ; 13.993 ;
+; RAMout[4]  ; MuxOut[7]   ; 14.384 ; 14.384 ; 14.384 ; 14.384 ;
+; RAMout[4]  ; SubOut[4]   ; 10.828 ; 10.828 ; 10.828 ; 10.828 ;
+; RAMout[4]  ; SubOut[5]   ; 11.014 ; 11.014 ; 11.014 ; 11.014 ;
+; RAMout[4]  ; SubOut[6]   ; 11.179 ; 11.179 ; 11.179 ; 11.179 ;
+; RAMout[4]  ; SubOut[7]   ; 11.163 ; 11.163 ; 11.163 ; 11.163 ;
+; RAMout[5]  ; MuxOut[5]   ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; RAMout[5]  ; MuxOut[6]   ; 13.336 ; 13.336 ; 13.336 ; 13.336 ;
+; RAMout[5]  ; MuxOut[7]   ; 13.727 ; 13.727 ; 13.727 ; 13.727 ;
+; RAMout[5]  ; SubOut[5]   ; 10.006 ; 10.006 ; 10.006 ; 10.006 ;
+; RAMout[5]  ; SubOut[6]   ; 10.522 ; 10.522 ; 10.522 ; 10.522 ;
+; RAMout[5]  ; SubOut[7]   ; 10.506 ; 10.506 ; 10.506 ; 10.506 ;
+; RAMout[6]  ; MuxOut[6]   ; 13.489 ; 13.489 ; 13.489 ; 13.489 ;
+; RAMout[6]  ; MuxOut[7]   ; 14.233 ; 14.233 ; 14.233 ; 14.233 ;
+; RAMout[6]  ; SubOut[6]   ; 10.675 ; 10.675 ; 10.675 ; 10.675 ;
+; RAMout[6]  ; SubOut[7]   ; 11.012 ; 11.012 ; 11.012 ; 11.012 ;
+; RAMout[7]  ; MuxOut[7]   ; 13.424 ; 13.424 ; 13.424 ; 13.424 ;
+; RAMout[7]  ; SubOut[7]   ; 10.203 ; 10.203 ; 10.203 ; 10.203 ;
+; sub        ; MuxOut[0]   ; 13.729 ; 13.729 ; 13.729 ; 13.729 ;
+; sub        ; MuxOut[1]   ; 13.514 ; 13.514 ; 13.514 ; 13.514 ;
+; sub        ; MuxOut[2]   ; 15.002 ; 15.002 ; 15.002 ; 15.002 ;
+; sub        ; MuxOut[3]   ; 13.401 ; 13.401 ; 13.401 ; 13.401 ;
+; sub        ; MuxOut[4]   ; 14.218 ; 14.218 ; 14.218 ; 14.218 ;
+; sub        ; MuxOut[5]   ; 13.759 ; 13.759 ; 13.759 ; 13.759 ;
+; sub        ; MuxOut[6]   ; 13.811 ; 13.811 ; 13.811 ; 13.811 ;
+; sub        ; MuxOut[7]   ; 13.942 ; 13.942 ; 13.942 ; 13.942 ;
+; sub        ; SubOut[0]   ; 10.571 ; 10.571 ; 10.571 ; 10.571 ;
+; sub        ; SubOut[1]   ; 10.984 ; 10.984 ; 10.984 ; 10.984 ;
+; sub        ; SubOut[2]   ; 11.109 ; 11.109 ; 11.109 ; 11.109 ;
+; sub        ; SubOut[3]   ; 10.561 ; 10.561 ; 10.561 ; 10.561 ;
+; sub        ; SubOut[4]   ; 11.148 ; 11.148 ; 11.148 ; 11.148 ;
+; sub        ; SubOut[5]   ; 10.480 ; 10.480 ; 10.480 ; 10.480 ;
+; sub        ; SubOut[6]   ; 10.997 ; 10.997 ; 10.997 ; 10.997 ;
+; sub        ; SubOut[7]   ; 10.721 ; 10.721 ; 10.721 ; 10.721 ;
++------------+-------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -9.380                ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                   ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Register:regA|A_Reg[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Register:regA|A_Reg[7] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[2]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[3]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[3]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[4]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[4]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[5]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[5]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[6]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[6]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; regA|A_Reg[7]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; regA|A_Reg[7]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Asel[*]    ; clk        ; 2.718 ; 2.718 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; 2.600 ; 2.600 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; 2.718 ; 2.718 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; 2.038 ; 2.038 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; 1.957 ; 1.957 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; 2.038 ; 2.038 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; 1.552 ; 1.552 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; 1.529 ; 1.529 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; 1.723 ; 1.723 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; 1.892 ; 1.892 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; 1.662 ; 1.662 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; 1.760 ; 1.760 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; 3.568 ; 3.568 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; 3.568 ; 3.568 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; 3.417 ; 3.417 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; 3.348 ; 3.348 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; 3.331 ; 3.331 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; 3.422 ; 3.422 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; 3.113 ; 3.113 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; 3.072 ; 3.072 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; 2.823 ; 2.823 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; 2.212 ; 2.212 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; 2.147 ; 2.147 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; 1.977 ; 1.977 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; 2.212 ; 2.212 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; 1.987 ; 1.987 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; 1.921 ; 1.921 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; 1.961 ; 1.961 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; 2.125 ; 2.125 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; 1.776 ; 1.776 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; 3.213 ; 3.213 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; 3.204 ; 3.204 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; 3.213 ; 3.213 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; 3.207 ; 3.207 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; 2.925 ; 2.925 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; 3.155 ; 3.155 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; 2.813 ; 2.813 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; 2.917 ; 2.917 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; 2.647 ; 2.647 ; Rise       ; clk             ;
+; loadA      ; clk        ; 2.062 ; 2.062 ; Rise       ; clk             ;
+; sub        ; clk        ; 3.422 ; 3.422 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Asel[*]    ; clk        ; -1.665 ; -1.665 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; -1.754 ; -1.754 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; -1.665 ; -1.665 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; -1.409 ; -1.409 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; -1.837 ; -1.837 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; -1.918 ; -1.918 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; -1.432 ; -1.432 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; -1.409 ; -1.409 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; -1.603 ; -1.603 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; -1.772 ; -1.772 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; -1.542 ; -1.542 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; -1.640 ; -1.640 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; -1.765 ; -1.765 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; -1.765 ; -1.765 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; -1.892 ; -1.892 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; -1.838 ; -1.838 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; -2.342 ; -2.342 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; -1.787 ; -1.787 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; -2.577 ; -2.577 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; -1.871 ; -1.871 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; -1.813 ; -1.813 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; -1.656 ; -1.656 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; -2.027 ; -2.027 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; -1.857 ; -1.857 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; -2.092 ; -2.092 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; -1.801 ; -1.801 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; -1.841 ; -1.841 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; -2.005 ; -2.005 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; -1.656 ; -1.656 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; -2.363 ; -2.363 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; -2.609 ; -2.609 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; -2.548 ; -2.548 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; -2.736 ; -2.736 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; -2.363 ; -2.363 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; -2.579 ; -2.579 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; -2.627 ; -2.627 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; -2.742 ; -2.742 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; -2.527 ; -2.527 ; Rise       ; clk             ;
+; loadA      ; clk        ; -1.737 ; -1.737 ; Rise       ; clk             ;
+; sub        ; clk        ; -2.614 ; -2.614 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 4.590 ; 4.590 ; Rise       ; clk             ;
+; Apos        ; clk        ; 4.075 ; 4.075 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 3.763 ; 3.763 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 3.762 ; 3.762 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 3.868 ; 3.868 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 3.864 ; 3.864 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 3.806 ; 3.806 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 4.060 ; 4.060 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 4.129 ; 4.129 ; Rise       ; clk             ;
+; Apos        ; clk        ; 4.075 ; 4.075 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 3.762 ; 3.762 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 3.763 ; 3.763 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 3.762 ; 3.762 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 3.868 ; 3.868 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 3.864 ; 3.864 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 3.806 ; 3.806 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 4.060 ; 4.060 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Asel[0]    ; MuxOut[0]   ; 5.811 ; 5.811 ; 5.811 ; 5.811 ;
+; Asel[0]    ; MuxOut[1]   ; 5.768 ; 5.768 ; 5.768 ; 5.768 ;
+; Asel[0]    ; MuxOut[2]   ; 6.215 ; 6.215 ; 6.215 ; 6.215 ;
+; Asel[0]    ; MuxOut[3]   ; 6.003 ; 6.003 ; 6.003 ; 6.003 ;
+; Asel[0]    ; MuxOut[4]   ; 6.018 ; 6.018 ; 6.018 ; 6.018 ;
+; Asel[0]    ; MuxOut[5]   ; 6.170 ; 6.170 ; 6.170 ; 6.170 ;
+; Asel[0]    ; MuxOut[6]   ; 5.739 ; 5.739 ; 5.739 ; 5.739 ;
+; Asel[0]    ; MuxOut[7]   ; 5.832 ; 5.832 ; 5.832 ; 5.832 ;
+; Asel[1]    ; MuxOut[0]   ; 5.844 ; 5.844 ; 5.844 ; 5.844 ;
+; Asel[1]    ; MuxOut[1]   ; 5.604 ; 5.604 ; 5.604 ; 5.604 ;
+; Asel[1]    ; MuxOut[2]   ; 6.120 ; 6.120 ; 6.120 ; 6.120 ;
+; Asel[1]    ; MuxOut[3]   ; 6.120 ; 6.120 ; 6.120 ; 6.120 ;
+; Asel[1]    ; MuxOut[4]   ; 5.983 ; 5.983 ; 5.983 ; 5.983 ;
+; Asel[1]    ; MuxOut[5]   ; 6.288 ; 6.288 ; 6.288 ; 6.288 ;
+; Asel[1]    ; MuxOut[6]   ; 5.572 ; 5.572 ; 5.572 ; 5.572 ;
+; Asel[1]    ; MuxOut[7]   ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; GND[0]     ; MuxOut[0]   ; 5.610 ;       ;       ; 5.610 ;
+; GND[1]     ; MuxOut[1]   ; 5.695 ;       ;       ; 5.695 ;
+; GND[2]     ; MuxOut[2]   ; 5.505 ;       ;       ; 5.505 ;
+; GND[3]     ; MuxOut[3]   ; 5.200 ;       ;       ; 5.200 ;
+; GND[4]     ; MuxOut[4]   ; 5.624 ;       ;       ; 5.624 ;
+; GND[5]     ; MuxOut[5]   ; 5.462 ;       ;       ; 5.462 ;
+; GND[6]     ; MuxOut[6]   ; 5.224 ;       ;       ; 5.224 ;
+; GND[7]     ; MuxOut[7]   ; 5.537 ;       ;       ; 5.537 ;
+; IROut[0]   ; MuxOut[0]   ; 6.748 ; 6.748 ; 6.748 ; 6.748 ;
+; IROut[0]   ; MuxOut[1]   ; 6.785 ; 6.785 ; 6.785 ; 6.785 ;
+; IROut[0]   ; MuxOut[2]   ; 7.386 ; 7.386 ; 7.386 ; 7.386 ;
+; IROut[0]   ; MuxOut[3]   ; 6.900 ; 6.900 ; 6.900 ; 6.900 ;
+; IROut[0]   ; MuxOut[4]   ; 7.118 ; 7.118 ; 7.118 ; 7.118 ;
+; IROut[0]   ; MuxOut[5]   ; 7.138 ; 7.138 ; 7.138 ; 7.138 ;
+; IROut[0]   ; MuxOut[6]   ; 7.009 ; 7.009 ; 7.009 ; 7.009 ;
+; IROut[0]   ; MuxOut[7]   ; 7.174 ; 7.174 ; 7.174 ; 7.174 ;
+; IROut[0]   ; SubOut[0]   ; 5.663 ; 5.663 ; 5.663 ; 5.663 ;
+; IROut[0]   ; SubOut[1]   ; 5.908 ; 5.908 ; 5.908 ; 5.908 ;
+; IROut[0]   ; SubOut[2]   ; 5.966 ; 5.966 ; 5.966 ; 5.966 ;
+; IROut[0]   ; SubOut[3]   ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; IROut[0]   ; SubOut[4]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; IROut[0]   ; SubOut[5]   ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; IROut[0]   ; SubOut[6]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; IROut[0]   ; SubOut[7]   ; 5.953 ; 5.953 ; 5.953 ; 5.953 ;
+; IROut[1]   ; MuxOut[1]   ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; IROut[1]   ; MuxOut[2]   ; 7.235 ; 7.235 ; 7.235 ; 7.235 ;
+; IROut[1]   ; MuxOut[3]   ; 6.749 ; 6.749 ; 6.749 ; 6.749 ;
+; IROut[1]   ; MuxOut[4]   ; 6.967 ; 6.967 ; 6.967 ; 6.967 ;
+; IROut[1]   ; MuxOut[5]   ; 6.987 ; 6.987 ; 6.987 ; 6.987 ;
+; IROut[1]   ; MuxOut[6]   ; 6.858 ; 6.858 ; 6.858 ; 6.858 ;
+; IROut[1]   ; MuxOut[7]   ; 7.023 ; 7.023 ; 7.023 ; 7.023 ;
+; IROut[1]   ; SubOut[1]   ; 5.654 ; 5.654 ; 5.654 ; 5.654 ;
+; IROut[1]   ; SubOut[2]   ; 5.815 ; 5.815 ; 5.815 ; 5.815 ;
+; IROut[1]   ; SubOut[3]   ; 5.704 ; 5.704 ; 5.704 ; 5.704 ;
+; IROut[1]   ; SubOut[4]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; IROut[1]   ; SubOut[5]   ; 5.735 ; 5.735 ; 5.735 ; 5.735 ;
+; IROut[1]   ; SubOut[6]   ; 5.883 ; 5.883 ; 5.883 ; 5.883 ;
+; IROut[1]   ; SubOut[7]   ; 5.802 ; 5.802 ; 5.802 ; 5.802 ;
+; IROut[2]   ; MuxOut[2]   ; 7.067 ; 7.067 ; 7.067 ; 7.067 ;
+; IROut[2]   ; MuxOut[3]   ; 6.680 ; 6.680 ; 6.680 ; 6.680 ;
+; IROut[2]   ; MuxOut[4]   ; 6.898 ; 6.898 ; 6.898 ; 6.898 ;
+; IROut[2]   ; MuxOut[5]   ; 6.918 ; 6.918 ; 6.918 ; 6.918 ;
+; IROut[2]   ; MuxOut[6]   ; 6.789 ; 6.789 ; 6.789 ; 6.789 ;
+; IROut[2]   ; MuxOut[7]   ; 6.954 ; 6.954 ; 6.954 ; 6.954 ;
+; IROut[2]   ; SubOut[2]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; IROut[2]   ; SubOut[3]   ; 5.635 ; 5.635 ; 5.635 ; 5.635 ;
+; IROut[2]   ; SubOut[4]   ; 5.731 ; 5.731 ; 5.731 ; 5.731 ;
+; IROut[2]   ; SubOut[5]   ; 5.666 ; 5.666 ; 5.666 ; 5.666 ;
+; IROut[2]   ; SubOut[6]   ; 5.814 ; 5.814 ; 5.814 ; 5.814 ;
+; IROut[2]   ; SubOut[7]   ; 5.733 ; 5.733 ; 5.733 ; 5.733 ;
+; IROut[3]   ; MuxOut[3]   ; 6.558 ; 6.558 ; 6.558 ; 6.558 ;
+; IROut[3]   ; MuxOut[4]   ; 6.881 ; 6.881 ; 6.881 ; 6.881 ;
+; IROut[3]   ; MuxOut[5]   ; 6.901 ; 6.901 ; 6.901 ; 6.901 ;
+; IROut[3]   ; MuxOut[6]   ; 6.772 ; 6.772 ; 6.772 ; 6.772 ;
+; IROut[3]   ; MuxOut[7]   ; 6.937 ; 6.937 ; 6.937 ; 6.937 ;
+; IROut[3]   ; SubOut[3]   ; 5.513 ; 5.513 ; 5.513 ; 5.513 ;
+; IROut[3]   ; SubOut[4]   ; 5.714 ; 5.714 ; 5.714 ; 5.714 ;
+; IROut[3]   ; SubOut[5]   ; 5.649 ; 5.649 ; 5.649 ; 5.649 ;
+; IROut[3]   ; SubOut[6]   ; 5.797 ; 5.797 ; 5.797 ; 5.797 ;
+; IROut[3]   ; SubOut[7]   ; 5.716 ; 5.716 ; 5.716 ; 5.716 ;
+; IROut[4]   ; MuxOut[4]   ; 6.869 ; 6.869 ; 6.869 ; 6.869 ;
+; IROut[4]   ; MuxOut[5]   ; 6.992 ; 6.992 ; 6.992 ; 6.992 ;
+; IROut[4]   ; MuxOut[6]   ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; IROut[4]   ; MuxOut[7]   ; 7.028 ; 7.028 ; 7.028 ; 7.028 ;
+; IROut[4]   ; SubOut[4]   ; 5.702 ; 5.702 ; 5.702 ; 5.702 ;
+; IROut[4]   ; SubOut[5]   ; 5.740 ; 5.740 ; 5.740 ; 5.740 ;
+; IROut[4]   ; SubOut[6]   ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; IROut[4]   ; SubOut[7]   ; 5.807 ; 5.807 ; 5.807 ; 5.807 ;
+; IROut[5]   ; MuxOut[5]   ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
+; IROut[5]   ; MuxOut[6]   ; 6.657 ; 6.657 ; 6.657 ; 6.657 ;
+; IROut[5]   ; MuxOut[7]   ; 6.822 ; 6.822 ; 6.822 ; 6.822 ;
+; IROut[5]   ; SubOut[5]   ; 5.431 ; 5.431 ; 5.431 ; 5.431 ;
+; IROut[5]   ; SubOut[6]   ; 5.682 ; 5.682 ; 5.682 ; 5.682 ;
+; IROut[5]   ; SubOut[7]   ; 5.601 ; 5.601 ; 5.601 ; 5.601 ;
+; IROut[6]   ; MuxOut[6]   ; 6.581 ; 6.581 ; 6.581 ; 6.581 ;
+; IROut[6]   ; MuxOut[7]   ; 6.849 ; 6.849 ; 6.849 ; 6.849 ;
+; IROut[6]   ; SubOut[6]   ; 5.606 ; 5.606 ; 5.606 ; 5.606 ;
+; IROut[6]   ; SubOut[7]   ; 5.628 ; 5.628 ; 5.628 ; 5.628 ;
+; IROut[7]   ; MuxOut[7]   ; 6.600 ; 6.600 ; 6.600 ; 6.600 ;
+; IROut[7]   ; SubOut[7]   ; 5.379 ; 5.379 ; 5.379 ; 5.379 ;
+; Input[0]   ; MuxOut[0]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; Input[1]   ; MuxOut[1]   ; 5.634 ;       ;       ; 5.634 ;
+; Input[2]   ; MuxOut[2]   ; 6.165 ; 6.165 ; 6.165 ; 6.165 ;
+; Input[3]   ; MuxOut[3]   ; 5.658 ;       ;       ; 5.658 ;
+; Input[4]   ; MuxOut[4]   ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; Input[5]   ; MuxOut[5]   ; 5.531 ;       ;       ; 5.531 ;
+; Input[6]   ; MuxOut[6]   ; 5.687 ; 5.687 ; 5.687 ; 5.687 ;
+; Input[7]   ; MuxOut[7]   ; 5.553 ;       ;       ; 5.553 ;
+; RAMout[0]  ; MuxOut[0]   ; 6.382 ; 6.382 ; 6.382 ; 6.382 ;
+; RAMout[0]  ; MuxOut[1]   ; 6.421 ; 6.421 ; 6.421 ; 6.421 ;
+; RAMout[0]  ; MuxOut[2]   ; 7.022 ; 7.022 ; 7.022 ; 7.022 ;
+; RAMout[0]  ; MuxOut[3]   ; 6.536 ; 6.536 ; 6.536 ; 6.536 ;
+; RAMout[0]  ; MuxOut[4]   ; 6.754 ; 6.754 ; 6.754 ; 6.754 ;
+; RAMout[0]  ; MuxOut[5]   ; 6.774 ; 6.774 ; 6.774 ; 6.774 ;
+; RAMout[0]  ; MuxOut[6]   ; 6.645 ; 6.645 ; 6.645 ; 6.645 ;
+; RAMout[0]  ; MuxOut[7]   ; 6.810 ; 6.810 ; 6.810 ; 6.810 ;
+; RAMout[0]  ; SubOut[0]   ; 5.297 ; 5.297 ; 5.297 ; 5.297 ;
+; RAMout[0]  ; SubOut[1]   ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; RAMout[0]  ; SubOut[2]   ; 5.602 ; 5.602 ; 5.602 ; 5.602 ;
+; RAMout[0]  ; SubOut[3]   ; 5.491 ; 5.491 ; 5.491 ; 5.491 ;
+; RAMout[0]  ; SubOut[4]   ; 5.587 ; 5.587 ; 5.587 ; 5.587 ;
+; RAMout[0]  ; SubOut[5]   ; 5.522 ; 5.522 ; 5.522 ; 5.522 ;
+; RAMout[0]  ; SubOut[6]   ; 5.670 ; 5.670 ; 5.670 ; 5.670 ;
+; RAMout[0]  ; SubOut[7]   ; 5.589 ; 5.589 ; 5.589 ; 5.589 ;
+; RAMout[1]  ; MuxOut[1]   ; 6.325 ; 6.325 ; 6.325 ; 6.325 ;
+; RAMout[1]  ; MuxOut[2]   ; 7.031 ; 7.031 ; 7.031 ; 7.031 ;
+; RAMout[1]  ; MuxOut[3]   ; 6.545 ; 6.545 ; 6.545 ; 6.545 ;
+; RAMout[1]  ; MuxOut[4]   ; 6.763 ; 6.763 ; 6.763 ; 6.763 ;
+; RAMout[1]  ; MuxOut[5]   ; 6.783 ; 6.783 ; 6.783 ; 6.783 ;
+; RAMout[1]  ; MuxOut[6]   ; 6.654 ; 6.654 ; 6.654 ; 6.654 ;
+; RAMout[1]  ; MuxOut[7]   ; 6.819 ; 6.819 ; 6.819 ; 6.819 ;
+; RAMout[1]  ; SubOut[1]   ; 5.448 ; 5.448 ; 5.448 ; 5.448 ;
+; RAMout[1]  ; SubOut[2]   ; 5.611 ; 5.611 ; 5.611 ; 5.611 ;
+; RAMout[1]  ; SubOut[3]   ; 5.500 ; 5.500 ; 5.500 ; 5.500 ;
+; RAMout[1]  ; SubOut[4]   ; 5.596 ; 5.596 ; 5.596 ; 5.596 ;
+; RAMout[1]  ; SubOut[5]   ; 5.531 ; 5.531 ; 5.531 ; 5.531 ;
+; RAMout[1]  ; SubOut[6]   ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; RAMout[1]  ; SubOut[7]   ; 5.598 ; 5.598 ; 5.598 ; 5.598 ;
+; RAMout[2]  ; MuxOut[2]   ; 6.925 ; 6.925 ; 6.925 ; 6.925 ;
+; RAMout[2]  ; MuxOut[3]   ; 6.539 ; 6.539 ; 6.539 ; 6.539 ;
+; RAMout[2]  ; MuxOut[4]   ; 6.757 ; 6.757 ; 6.757 ; 6.757 ;
+; RAMout[2]  ; MuxOut[5]   ; 6.777 ; 6.777 ; 6.777 ; 6.777 ;
+; RAMout[2]  ; MuxOut[6]   ; 6.648 ; 6.648 ; 6.648 ; 6.648 ;
+; RAMout[2]  ; MuxOut[7]   ; 6.813 ; 6.813 ; 6.813 ; 6.813 ;
+; RAMout[2]  ; SubOut[2]   ; 5.505 ; 5.505 ; 5.505 ; 5.505 ;
+; RAMout[2]  ; SubOut[3]   ; 5.494 ; 5.494 ; 5.494 ; 5.494 ;
+; RAMout[2]  ; SubOut[4]   ; 5.590 ; 5.590 ; 5.590 ; 5.590 ;
+; RAMout[2]  ; SubOut[5]   ; 5.525 ; 5.525 ; 5.525 ; 5.525 ;
+; RAMout[2]  ; SubOut[6]   ; 5.673 ; 5.673 ; 5.673 ; 5.673 ;
+; RAMout[2]  ; SubOut[7]   ; 5.592 ; 5.592 ; 5.592 ; 5.592 ;
+; RAMout[3]  ; MuxOut[3]   ; 6.154 ; 6.154 ; 6.154 ; 6.154 ;
+; RAMout[3]  ; MuxOut[4]   ; 6.475 ; 6.475 ; 6.475 ; 6.475 ;
+; RAMout[3]  ; MuxOut[5]   ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; RAMout[3]  ; MuxOut[6]   ; 6.366 ; 6.366 ; 6.366 ; 6.366 ;
+; RAMout[3]  ; MuxOut[7]   ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; RAMout[3]  ; SubOut[3]   ; 5.109 ; 5.109 ; 5.109 ; 5.109 ;
+; RAMout[3]  ; SubOut[4]   ; 5.308 ; 5.308 ; 5.308 ; 5.308 ;
+; RAMout[3]  ; SubOut[5]   ; 5.243 ; 5.243 ; 5.243 ; 5.243 ;
+; RAMout[3]  ; SubOut[6]   ; 5.391 ; 5.391 ; 5.391 ; 5.391 ;
+; RAMout[3]  ; SubOut[7]   ; 5.310 ; 5.310 ; 5.310 ; 5.310 ;
+; RAMout[4]  ; MuxOut[4]   ; 6.600 ; 6.600 ; 6.600 ; 6.600 ;
+; RAMout[4]  ; MuxOut[5]   ; 6.725 ; 6.725 ; 6.725 ; 6.725 ;
+; RAMout[4]  ; MuxOut[6]   ; 6.596 ; 6.596 ; 6.596 ; 6.596 ;
+; RAMout[4]  ; MuxOut[7]   ; 6.761 ; 6.761 ; 6.761 ; 6.761 ;
+; RAMout[4]  ; SubOut[4]   ; 5.433 ; 5.433 ; 5.433 ; 5.433 ;
+; RAMout[4]  ; SubOut[5]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[4]  ; SubOut[6]   ; 5.621 ; 5.621 ; 5.621 ; 5.621 ;
+; RAMout[4]  ; SubOut[7]   ; 5.540 ; 5.540 ; 5.540 ; 5.540 ;
+; RAMout[5]  ; MuxOut[5]   ; 6.383 ; 6.383 ; 6.383 ; 6.383 ;
+; RAMout[5]  ; MuxOut[6]   ; 6.359 ; 6.359 ; 6.359 ; 6.359 ;
+; RAMout[5]  ; MuxOut[7]   ; 6.524 ; 6.524 ; 6.524 ; 6.524 ;
+; RAMout[5]  ; SubOut[5]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; RAMout[5]  ; SubOut[6]   ; 5.384 ; 5.384 ; 5.384 ; 5.384 ;
+; RAMout[5]  ; SubOut[7]   ; 5.303 ; 5.303 ; 5.303 ; 5.303 ;
+; RAMout[6]  ; MuxOut[6]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[6]  ; MuxOut[7]   ; 6.694 ; 6.694 ; 6.694 ; 6.694 ;
+; RAMout[6]  ; SubOut[6]   ; 5.449 ; 5.449 ; 5.449 ; 5.449 ;
+; RAMout[6]  ; SubOut[7]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[7]  ; MuxOut[7]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[7]  ; SubOut[7]   ; 5.203 ; 5.203 ; 5.203 ; 5.203 ;
+; sub        ; MuxOut[0]   ; 6.513 ; 6.513 ; 6.513 ; 6.513 ;
+; sub        ; MuxOut[1]   ; 6.550 ; 6.550 ; 6.550 ; 6.550 ;
+; sub        ; MuxOut[2]   ; 7.240 ; 7.240 ; 7.240 ; 7.240 ;
+; sub        ; MuxOut[3]   ; 6.754 ; 6.754 ; 6.754 ; 6.754 ;
+; sub        ; MuxOut[4]   ; 6.972 ; 6.972 ; 6.972 ; 6.972 ;
+; sub        ; MuxOut[5]   ; 6.992 ; 6.992 ; 6.992 ; 6.992 ;
+; sub        ; MuxOut[6]   ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; sub        ; MuxOut[7]   ; 7.028 ; 7.028 ; 7.028 ; 7.028 ;
+; sub        ; SubOut[0]   ; 5.428 ; 5.428 ; 5.428 ; 5.428 ;
+; sub        ; SubOut[1]   ; 5.673 ; 5.673 ; 5.673 ; 5.673 ;
+; sub        ; SubOut[2]   ; 5.820 ; 5.820 ; 5.820 ; 5.820 ;
+; sub        ; SubOut[3]   ; 5.709 ; 5.709 ; 5.709 ; 5.709 ;
+; sub        ; SubOut[4]   ; 5.805 ; 5.805 ; 5.805 ; 5.805 ;
+; sub        ; SubOut[5]   ; 5.740 ; 5.740 ; 5.740 ; 5.740 ;
+; sub        ; SubOut[6]   ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; sub        ; SubOut[7]   ; 5.807 ; 5.807 ; 5.807 ; 5.807 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Asel[0]    ; MuxOut[0]   ; 5.811 ; 5.811 ; 5.811 ; 5.811 ;
+; Asel[0]    ; MuxOut[1]   ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; Asel[0]    ; MuxOut[2]   ; 6.215 ; 6.215 ; 6.215 ; 6.215 ;
+; Asel[0]    ; MuxOut[3]   ; 5.627 ; 5.627 ; 5.627 ; 5.627 ;
+; Asel[0]    ; MuxOut[4]   ; 6.018 ; 6.018 ; 6.018 ; 6.018 ;
+; Asel[0]    ; MuxOut[5]   ; 5.487 ; 5.487 ; 5.487 ; 5.487 ;
+; Asel[0]    ; MuxOut[6]   ; 5.739 ; 5.739 ; 5.739 ; 5.739 ;
+; Asel[0]    ; MuxOut[7]   ; 5.651 ; 5.651 ; 5.651 ; 5.651 ;
+; Asel[1]    ; MuxOut[0]   ; 5.438 ; 5.438 ; 5.438 ; 5.438 ;
+; Asel[1]    ; MuxOut[1]   ; 5.604 ; 5.604 ; 5.604 ; 5.604 ;
+; Asel[1]    ; MuxOut[2]   ; 5.874 ; 5.874 ; 5.874 ; 5.874 ;
+; Asel[1]    ; MuxOut[3]   ; 6.120 ; 6.120 ; 6.120 ; 6.120 ;
+; Asel[1]    ; MuxOut[4]   ; 5.823 ; 5.823 ; 5.823 ; 5.823 ;
+; Asel[1]    ; MuxOut[5]   ; 6.288 ; 6.288 ; 6.288 ; 6.288 ;
+; Asel[1]    ; MuxOut[6]   ; 5.350 ; 5.350 ; 5.350 ; 5.350 ;
+; Asel[1]    ; MuxOut[7]   ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; GND[0]     ; MuxOut[0]   ; 5.610 ;       ;       ; 5.610 ;
+; GND[1]     ; MuxOut[1]   ; 5.695 ;       ;       ; 5.695 ;
+; GND[2]     ; MuxOut[2]   ; 5.505 ;       ;       ; 5.505 ;
+; GND[3]     ; MuxOut[3]   ; 5.200 ;       ;       ; 5.200 ;
+; GND[4]     ; MuxOut[4]   ; 5.624 ;       ;       ; 5.624 ;
+; GND[5]     ; MuxOut[5]   ; 5.462 ;       ;       ; 5.462 ;
+; GND[6]     ; MuxOut[6]   ; 5.224 ;       ;       ; 5.224 ;
+; GND[7]     ; MuxOut[7]   ; 5.537 ;       ;       ; 5.537 ;
+; IROut[0]   ; MuxOut[0]   ; 5.538 ; 6.748 ; 6.748 ; 5.538 ;
+; IROut[0]   ; MuxOut[1]   ; 6.785 ; 6.785 ; 6.785 ; 6.785 ;
+; IROut[0]   ; MuxOut[2]   ; 7.386 ; 7.386 ; 7.386 ; 7.386 ;
+; IROut[0]   ; MuxOut[3]   ; 6.900 ; 6.900 ; 6.900 ; 6.900 ;
+; IROut[0]   ; MuxOut[4]   ; 7.118 ; 7.118 ; 7.118 ; 7.118 ;
+; IROut[0]   ; MuxOut[5]   ; 7.138 ; 7.138 ; 7.138 ; 7.138 ;
+; IROut[0]   ; MuxOut[6]   ; 7.009 ; 7.009 ; 7.009 ; 7.009 ;
+; IROut[0]   ; MuxOut[7]   ; 7.174 ; 7.174 ; 7.174 ; 7.174 ;
+; IROut[0]   ; SubOut[0]   ; 5.663 ; 5.663 ; 5.663 ; 5.663 ;
+; IROut[0]   ; SubOut[1]   ; 5.908 ; 5.908 ; 5.908 ; 5.908 ;
+; IROut[0]   ; SubOut[2]   ; 5.966 ; 5.966 ; 5.966 ; 5.966 ;
+; IROut[0]   ; SubOut[3]   ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; IROut[0]   ; SubOut[4]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; IROut[0]   ; SubOut[5]   ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; IROut[0]   ; SubOut[6]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; IROut[0]   ; SubOut[7]   ; 5.953 ; 5.953 ; 5.953 ; 5.953 ;
+; IROut[1]   ; MuxOut[1]   ; 5.669 ; 5.669 ; 5.669 ; 5.669 ;
+; IROut[1]   ; MuxOut[2]   ; 7.235 ; 7.235 ; 7.235 ; 7.235 ;
+; IROut[1]   ; MuxOut[3]   ; 6.749 ; 6.749 ; 6.749 ; 6.749 ;
+; IROut[1]   ; MuxOut[4]   ; 6.967 ; 6.967 ; 6.967 ; 6.967 ;
+; IROut[1]   ; MuxOut[5]   ; 6.987 ; 6.987 ; 6.987 ; 6.987 ;
+; IROut[1]   ; MuxOut[6]   ; 6.858 ; 6.858 ; 6.858 ; 6.858 ;
+; IROut[1]   ; MuxOut[7]   ; 7.023 ; 7.023 ; 7.023 ; 7.023 ;
+; IROut[1]   ; SubOut[1]   ; 5.654 ; 5.654 ; 5.654 ; 5.654 ;
+; IROut[1]   ; SubOut[2]   ; 5.815 ; 5.815 ; 5.815 ; 5.815 ;
+; IROut[1]   ; SubOut[3]   ; 5.704 ; 5.704 ; 5.704 ; 5.704 ;
+; IROut[1]   ; SubOut[4]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; IROut[1]   ; SubOut[5]   ; 5.735 ; 5.735 ; 5.735 ; 5.735 ;
+; IROut[1]   ; SubOut[6]   ; 5.883 ; 5.883 ; 5.883 ; 5.883 ;
+; IROut[1]   ; SubOut[7]   ; 5.802 ; 5.802 ; 5.802 ; 5.802 ;
+; IROut[2]   ; MuxOut[2]   ; 5.911 ; 7.067 ; 7.067 ; 5.911 ;
+; IROut[2]   ; MuxOut[3]   ; 6.680 ; 6.680 ; 6.680 ; 6.680 ;
+; IROut[2]   ; MuxOut[4]   ; 6.898 ; 6.898 ; 6.898 ; 6.898 ;
+; IROut[2]   ; MuxOut[5]   ; 6.918 ; 6.918 ; 6.918 ; 6.918 ;
+; IROut[2]   ; MuxOut[6]   ; 6.789 ; 6.789 ; 6.789 ; 6.789 ;
+; IROut[2]   ; MuxOut[7]   ; 6.954 ; 6.954 ; 6.954 ; 6.954 ;
+; IROut[2]   ; SubOut[2]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; IROut[2]   ; SubOut[3]   ; 5.635 ; 5.635 ; 5.635 ; 5.635 ;
+; IROut[2]   ; SubOut[4]   ; 5.731 ; 5.731 ; 5.731 ; 5.731 ;
+; IROut[2]   ; SubOut[5]   ; 5.666 ; 5.666 ; 5.666 ; 5.666 ;
+; IROut[2]   ; SubOut[6]   ; 5.814 ; 5.814 ; 5.814 ; 5.814 ;
+; IROut[2]   ; SubOut[7]   ; 5.733 ; 5.733 ; 5.733 ; 5.733 ;
+; IROut[3]   ; MuxOut[3]   ; 6.133 ; 6.133 ; 6.133 ; 6.133 ;
+; IROut[3]   ; MuxOut[4]   ; 6.881 ; 6.881 ; 6.881 ; 6.881 ;
+; IROut[3]   ; MuxOut[5]   ; 6.901 ; 6.901 ; 6.901 ; 6.901 ;
+; IROut[3]   ; MuxOut[6]   ; 6.772 ; 6.772 ; 6.772 ; 6.772 ;
+; IROut[3]   ; MuxOut[7]   ; 6.937 ; 6.937 ; 6.937 ; 6.937 ;
+; IROut[3]   ; SubOut[3]   ; 5.513 ; 5.513 ; 5.513 ; 5.513 ;
+; IROut[3]   ; SubOut[4]   ; 5.714 ; 5.714 ; 5.714 ; 5.714 ;
+; IROut[3]   ; SubOut[5]   ; 5.649 ; 5.649 ; 5.649 ; 5.649 ;
+; IROut[3]   ; SubOut[6]   ; 5.797 ; 5.797 ; 5.797 ; 5.797 ;
+; IROut[3]   ; SubOut[7]   ; 5.716 ; 5.716 ; 5.716 ; 5.716 ;
+; IROut[4]   ; MuxOut[4]   ; 5.808 ; 6.869 ; 6.869 ; 5.808 ;
+; IROut[4]   ; MuxOut[5]   ; 6.992 ; 6.992 ; 6.992 ; 6.992 ;
+; IROut[4]   ; MuxOut[6]   ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; IROut[4]   ; MuxOut[7]   ; 7.028 ; 7.028 ; 7.028 ; 7.028 ;
+; IROut[4]   ; SubOut[4]   ; 5.702 ; 5.702 ; 5.702 ; 5.702 ;
+; IROut[4]   ; SubOut[5]   ; 5.740 ; 5.740 ; 5.740 ; 5.740 ;
+; IROut[4]   ; SubOut[6]   ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; IROut[4]   ; SubOut[7]   ; 5.807 ; 5.807 ; 5.807 ; 5.807 ;
+; IROut[5]   ; MuxOut[5]   ; 6.267 ; 6.267 ; 6.267 ; 6.267 ;
+; IROut[5]   ; MuxOut[6]   ; 6.657 ; 6.657 ; 6.657 ; 6.657 ;
+; IROut[5]   ; MuxOut[7]   ; 6.822 ; 6.822 ; 6.822 ; 6.822 ;
+; IROut[5]   ; SubOut[5]   ; 5.431 ; 5.431 ; 5.431 ; 5.431 ;
+; IROut[5]   ; SubOut[6]   ; 5.682 ; 5.682 ; 5.682 ; 5.682 ;
+; IROut[5]   ; SubOut[7]   ; 5.601 ; 5.601 ; 5.601 ; 5.601 ;
+; IROut[6]   ; MuxOut[6]   ; 5.553 ; 6.581 ; 6.581 ; 5.553 ;
+; IROut[6]   ; MuxOut[7]   ; 6.849 ; 6.849 ; 6.849 ; 6.849 ;
+; IROut[6]   ; SubOut[6]   ; 5.606 ; 5.606 ; 5.606 ; 5.606 ;
+; IROut[6]   ; SubOut[7]   ; 5.628 ; 5.628 ; 5.628 ; 5.628 ;
+; IROut[7]   ; MuxOut[7]   ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; IROut[7]   ; SubOut[7]   ; 5.379 ; 5.379 ; 5.379 ; 5.379 ;
+; Input[0]   ; MuxOut[0]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; Input[1]   ; MuxOut[1]   ; 5.634 ;       ;       ; 5.634 ;
+; Input[2]   ; MuxOut[2]   ; 6.165 ; 6.165 ; 6.165 ; 6.165 ;
+; Input[3]   ; MuxOut[3]   ; 5.658 ;       ;       ; 5.658 ;
+; Input[4]   ; MuxOut[4]   ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; Input[5]   ; MuxOut[5]   ; 5.531 ;       ;       ; 5.531 ;
+; Input[6]   ; MuxOut[6]   ; 5.687 ; 5.687 ; 5.687 ; 5.687 ;
+; Input[7]   ; MuxOut[7]   ; 5.553 ;       ;       ; 5.553 ;
+; RAMout[0]  ; MuxOut[0]   ; 6.382 ; 6.382 ; 6.382 ; 6.382 ;
+; RAMout[0]  ; MuxOut[1]   ; 6.421 ; 6.421 ; 6.421 ; 6.421 ;
+; RAMout[0]  ; MuxOut[2]   ; 7.022 ; 7.022 ; 7.022 ; 7.022 ;
+; RAMout[0]  ; MuxOut[3]   ; 6.536 ; 6.536 ; 6.536 ; 6.536 ;
+; RAMout[0]  ; MuxOut[4]   ; 6.754 ; 6.754 ; 6.754 ; 6.754 ;
+; RAMout[0]  ; MuxOut[5]   ; 6.774 ; 6.774 ; 6.774 ; 6.774 ;
+; RAMout[0]  ; MuxOut[6]   ; 6.645 ; 6.645 ; 6.645 ; 6.645 ;
+; RAMout[0]  ; MuxOut[7]   ; 6.810 ; 6.810 ; 6.810 ; 6.810 ;
+; RAMout[0]  ; SubOut[0]   ; 5.297 ; 5.297 ; 5.297 ; 5.297 ;
+; RAMout[0]  ; SubOut[1]   ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; RAMout[0]  ; SubOut[2]   ; 5.602 ; 5.602 ; 5.602 ; 5.602 ;
+; RAMout[0]  ; SubOut[3]   ; 5.491 ; 5.491 ; 5.491 ; 5.491 ;
+; RAMout[0]  ; SubOut[4]   ; 5.587 ; 5.587 ; 5.587 ; 5.587 ;
+; RAMout[0]  ; SubOut[5]   ; 5.522 ; 5.522 ; 5.522 ; 5.522 ;
+; RAMout[0]  ; SubOut[6]   ; 5.670 ; 5.670 ; 5.670 ; 5.670 ;
+; RAMout[0]  ; SubOut[7]   ; 5.589 ; 5.589 ; 5.589 ; 5.589 ;
+; RAMout[1]  ; MuxOut[1]   ; 6.325 ; 6.325 ; 6.325 ; 6.325 ;
+; RAMout[1]  ; MuxOut[2]   ; 7.031 ; 7.031 ; 7.031 ; 7.031 ;
+; RAMout[1]  ; MuxOut[3]   ; 6.545 ; 6.545 ; 6.545 ; 6.545 ;
+; RAMout[1]  ; MuxOut[4]   ; 6.763 ; 6.763 ; 6.763 ; 6.763 ;
+; RAMout[1]  ; MuxOut[5]   ; 6.783 ; 6.783 ; 6.783 ; 6.783 ;
+; RAMout[1]  ; MuxOut[6]   ; 6.654 ; 6.654 ; 6.654 ; 6.654 ;
+; RAMout[1]  ; MuxOut[7]   ; 6.819 ; 6.819 ; 6.819 ; 6.819 ;
+; RAMout[1]  ; SubOut[1]   ; 5.448 ; 5.448 ; 5.448 ; 5.448 ;
+; RAMout[1]  ; SubOut[2]   ; 5.611 ; 5.611 ; 5.611 ; 5.611 ;
+; RAMout[1]  ; SubOut[3]   ; 5.500 ; 5.500 ; 5.500 ; 5.500 ;
+; RAMout[1]  ; SubOut[4]   ; 5.596 ; 5.596 ; 5.596 ; 5.596 ;
+; RAMout[1]  ; SubOut[5]   ; 5.531 ; 5.531 ; 5.531 ; 5.531 ;
+; RAMout[1]  ; SubOut[6]   ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; RAMout[1]  ; SubOut[7]   ; 5.598 ; 5.598 ; 5.598 ; 5.598 ;
+; RAMout[2]  ; MuxOut[2]   ; 6.925 ; 6.925 ; 6.925 ; 6.925 ;
+; RAMout[2]  ; MuxOut[3]   ; 6.539 ; 6.539 ; 6.539 ; 6.539 ;
+; RAMout[2]  ; MuxOut[4]   ; 6.757 ; 6.757 ; 6.757 ; 6.757 ;
+; RAMout[2]  ; MuxOut[5]   ; 6.777 ; 6.777 ; 6.777 ; 6.777 ;
+; RAMout[2]  ; MuxOut[6]   ; 6.648 ; 6.648 ; 6.648 ; 6.648 ;
+; RAMout[2]  ; MuxOut[7]   ; 6.813 ; 6.813 ; 6.813 ; 6.813 ;
+; RAMout[2]  ; SubOut[2]   ; 5.505 ; 5.505 ; 5.505 ; 5.505 ;
+; RAMout[2]  ; SubOut[3]   ; 5.494 ; 5.494 ; 5.494 ; 5.494 ;
+; RAMout[2]  ; SubOut[4]   ; 5.590 ; 5.590 ; 5.590 ; 5.590 ;
+; RAMout[2]  ; SubOut[5]   ; 5.525 ; 5.525 ; 5.525 ; 5.525 ;
+; RAMout[2]  ; SubOut[6]   ; 5.673 ; 5.673 ; 5.673 ; 5.673 ;
+; RAMout[2]  ; SubOut[7]   ; 5.592 ; 5.592 ; 5.592 ; 5.592 ;
+; RAMout[3]  ; MuxOut[3]   ; 6.154 ; 6.154 ; 6.154 ; 6.154 ;
+; RAMout[3]  ; MuxOut[4]   ; 6.475 ; 6.475 ; 6.475 ; 6.475 ;
+; RAMout[3]  ; MuxOut[5]   ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; RAMout[3]  ; MuxOut[6]   ; 6.366 ; 6.366 ; 6.366 ; 6.366 ;
+; RAMout[3]  ; MuxOut[7]   ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; RAMout[3]  ; SubOut[3]   ; 5.109 ; 5.109 ; 5.109 ; 5.109 ;
+; RAMout[3]  ; SubOut[4]   ; 5.308 ; 5.308 ; 5.308 ; 5.308 ;
+; RAMout[3]  ; SubOut[5]   ; 5.243 ; 5.243 ; 5.243 ; 5.243 ;
+; RAMout[3]  ; SubOut[6]   ; 5.391 ; 5.391 ; 5.391 ; 5.391 ;
+; RAMout[3]  ; SubOut[7]   ; 5.310 ; 5.310 ; 5.310 ; 5.310 ;
+; RAMout[4]  ; MuxOut[4]   ; 6.600 ; 6.600 ; 6.600 ; 6.600 ;
+; RAMout[4]  ; MuxOut[5]   ; 6.725 ; 6.725 ; 6.725 ; 6.725 ;
+; RAMout[4]  ; MuxOut[6]   ; 6.596 ; 6.596 ; 6.596 ; 6.596 ;
+; RAMout[4]  ; MuxOut[7]   ; 6.761 ; 6.761 ; 6.761 ; 6.761 ;
+; RAMout[4]  ; SubOut[4]   ; 5.433 ; 5.433 ; 5.433 ; 5.433 ;
+; RAMout[4]  ; SubOut[5]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[4]  ; SubOut[6]   ; 5.621 ; 5.621 ; 5.621 ; 5.621 ;
+; RAMout[4]  ; SubOut[7]   ; 5.540 ; 5.540 ; 5.540 ; 5.540 ;
+; RAMout[5]  ; MuxOut[5]   ; 6.383 ; 6.383 ; 6.383 ; 6.383 ;
+; RAMout[5]  ; MuxOut[6]   ; 6.359 ; 6.359 ; 6.359 ; 6.359 ;
+; RAMout[5]  ; MuxOut[7]   ; 6.524 ; 6.524 ; 6.524 ; 6.524 ;
+; RAMout[5]  ; SubOut[5]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; RAMout[5]  ; SubOut[6]   ; 5.384 ; 5.384 ; 5.384 ; 5.384 ;
+; RAMout[5]  ; SubOut[7]   ; 5.303 ; 5.303 ; 5.303 ; 5.303 ;
+; RAMout[6]  ; MuxOut[6]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[6]  ; MuxOut[7]   ; 6.694 ; 6.694 ; 6.694 ; 6.694 ;
+; RAMout[6]  ; SubOut[6]   ; 5.449 ; 5.449 ; 5.449 ; 5.449 ;
+; RAMout[6]  ; SubOut[7]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[7]  ; MuxOut[7]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[7]  ; SubOut[7]   ; 5.203 ; 5.203 ; 5.203 ; 5.203 ;
+; sub        ; MuxOut[0]   ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; sub        ; MuxOut[1]   ; 6.429 ; 6.429 ; 6.429 ; 6.429 ;
+; sub        ; MuxOut[2]   ; 7.030 ; 7.030 ; 7.030 ; 7.030 ;
+; sub        ; MuxOut[3]   ; 6.405 ; 6.405 ; 6.405 ; 6.405 ;
+; sub        ; MuxOut[4]   ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; sub        ; MuxOut[5]   ; 6.561 ; 6.561 ; 6.561 ; 6.561 ;
+; sub        ; MuxOut[6]   ; 6.535 ; 6.535 ; 6.535 ; 6.535 ;
+; sub        ; MuxOut[7]   ; 6.611 ; 6.611 ; 6.611 ; 6.611 ;
+; sub        ; SubOut[0]   ; 5.410 ; 5.410 ; 5.410 ; 5.410 ;
+; sub        ; SubOut[1]   ; 5.552 ; 5.552 ; 5.552 ; 5.552 ;
+; sub        ; SubOut[2]   ; 5.610 ; 5.610 ; 5.610 ; 5.610 ;
+; sub        ; SubOut[3]   ; 5.360 ; 5.360 ; 5.360 ; 5.360 ;
+; sub        ; SubOut[4]   ; 5.561 ; 5.561 ; 5.561 ; 5.561 ;
+; sub        ; SubOut[5]   ; 5.309 ; 5.309 ; 5.309 ; 5.309 ;
+; sub        ; SubOut[6]   ; 5.560 ; 5.560 ; 5.560 ; 5.560 ;
+; sub        ; SubOut[7]   ; 5.390 ; 5.390 ; 5.390 ; 5.390 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; N/A   ; N/A  ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -11.407             ;
+;  clk             ; N/A   ; N/A  ; N/A      ; N/A     ; -11.407             ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Asel[*]    ; clk        ; 6.480 ; 6.480 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; 6.179 ; 6.179 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; 6.480 ; 6.480 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; 4.748 ; 4.748 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; 4.514 ; 4.514 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; 4.748 ; 4.748 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; 3.454 ; 3.454 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; 3.426 ; 3.426 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; 3.891 ; 3.891 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; 4.368 ; 4.368 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; 3.818 ; 3.818 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; 4.054 ; 4.054 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; 8.827 ; 8.827 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; 8.827 ; 8.827 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; 8.407 ; 8.407 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; 8.213 ; 8.213 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; 8.264 ; 8.264 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; 8.611 ; 8.611 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; 7.744 ; 7.744 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; 7.655 ; 7.655 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; 6.894 ; 6.894 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; 5.255 ; 5.255 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; 5.105 ; 5.105 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; 4.478 ; 4.478 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; 5.255 ; 5.255 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; 4.515 ; 4.515 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; 4.482 ; 4.482 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; 4.432 ; 4.432 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; 5.063 ; 5.063 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; 4.108 ; 4.108 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; 7.877 ; 7.877 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; 7.854 ; 7.854 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; 7.877 ; 7.877 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; 7.834 ; 7.834 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; 7.216 ; 7.216 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; 7.806 ; 7.806 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; 6.860 ; 6.860 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; 7.200 ; 7.200 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; 6.391 ; 6.391 ; Rise       ; clk             ;
+; loadA      ; clk        ; 4.505 ; 4.505 ; Rise       ; clk             ;
+; sub        ; clk        ; 8.428 ; 8.428 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Asel[*]    ; clk        ; -1.665 ; -1.665 ; Rise       ; clk             ;
+;  Asel[0]   ; clk        ; -1.754 ; -1.754 ; Rise       ; clk             ;
+;  Asel[1]   ; clk        ; -1.665 ; -1.665 ; Rise       ; clk             ;
+; GND[*]     ; clk        ; -1.409 ; -1.409 ; Rise       ; clk             ;
+;  GND[0]    ; clk        ; -1.837 ; -1.837 ; Rise       ; clk             ;
+;  GND[1]    ; clk        ; -1.918 ; -1.918 ; Rise       ; clk             ;
+;  GND[2]    ; clk        ; -1.432 ; -1.432 ; Rise       ; clk             ;
+;  GND[3]    ; clk        ; -1.409 ; -1.409 ; Rise       ; clk             ;
+;  GND[4]    ; clk        ; -1.603 ; -1.603 ; Rise       ; clk             ;
+;  GND[5]    ; clk        ; -1.772 ; -1.772 ; Rise       ; clk             ;
+;  GND[6]    ; clk        ; -1.542 ; -1.542 ; Rise       ; clk             ;
+;  GND[7]    ; clk        ; -1.640 ; -1.640 ; Rise       ; clk             ;
+; IROut[*]   ; clk        ; -1.765 ; -1.765 ; Rise       ; clk             ;
+;  IROut[0]  ; clk        ; -1.765 ; -1.765 ; Rise       ; clk             ;
+;  IROut[1]  ; clk        ; -1.892 ; -1.892 ; Rise       ; clk             ;
+;  IROut[2]  ; clk        ; -1.838 ; -1.838 ; Rise       ; clk             ;
+;  IROut[3]  ; clk        ; -2.342 ; -2.342 ; Rise       ; clk             ;
+;  IROut[4]  ; clk        ; -1.787 ; -1.787 ; Rise       ; clk             ;
+;  IROut[5]  ; clk        ; -2.577 ; -2.577 ; Rise       ; clk             ;
+;  IROut[6]  ; clk        ; -1.871 ; -1.871 ; Rise       ; clk             ;
+;  IROut[7]  ; clk        ; -1.813 ; -1.813 ; Rise       ; clk             ;
+; Input[*]   ; clk        ; -1.656 ; -1.656 ; Rise       ; clk             ;
+;  Input[0]  ; clk        ; -2.027 ; -2.027 ; Rise       ; clk             ;
+;  Input[1]  ; clk        ; -1.857 ; -1.857 ; Rise       ; clk             ;
+;  Input[2]  ; clk        ; -2.092 ; -2.092 ; Rise       ; clk             ;
+;  Input[3]  ; clk        ; -1.867 ; -1.867 ; Rise       ; clk             ;
+;  Input[4]  ; clk        ; -1.801 ; -1.801 ; Rise       ; clk             ;
+;  Input[5]  ; clk        ; -1.841 ; -1.841 ; Rise       ; clk             ;
+;  Input[6]  ; clk        ; -2.005 ; -2.005 ; Rise       ; clk             ;
+;  Input[7]  ; clk        ; -1.656 ; -1.656 ; Rise       ; clk             ;
+; RAMout[*]  ; clk        ; -2.363 ; -2.363 ; Rise       ; clk             ;
+;  RAMout[0] ; clk        ; -2.609 ; -2.609 ; Rise       ; clk             ;
+;  RAMout[1] ; clk        ; -2.548 ; -2.548 ; Rise       ; clk             ;
+;  RAMout[2] ; clk        ; -2.736 ; -2.736 ; Rise       ; clk             ;
+;  RAMout[3] ; clk        ; -2.363 ; -2.363 ; Rise       ; clk             ;
+;  RAMout[4] ; clk        ; -2.579 ; -2.579 ; Rise       ; clk             ;
+;  RAMout[5] ; clk        ; -2.627 ; -2.627 ; Rise       ; clk             ;
+;  RAMout[6] ; clk        ; -2.742 ; -2.742 ; Rise       ; clk             ;
+;  RAMout[7] ; clk        ; -2.527 ; -2.527 ; Rise       ; clk             ;
+; loadA      ; clk        ; -1.737 ; -1.737 ; Rise       ; clk             ;
+; sub        ; clk        ; -2.614 ; -2.614 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 9.137 ; 9.137 ; Rise       ; clk             ;
+; Apos        ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 7.730 ; 7.730 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 7.730 ; 7.730 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 6.883 ; 6.883 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 6.885 ; 6.885 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 7.159 ; 7.159 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 7.154 ; 7.154 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 6.955 ; 6.955 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 7.703 ; 7.703 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; Aeq0        ; clk        ; 4.129 ; 4.129 ; Rise       ; clk             ;
+; Apos        ; clk        ; 4.075 ; 4.075 ; Rise       ; clk             ;
+; regAOut[*]  ; clk        ; 3.762 ; 3.762 ; Rise       ; clk             ;
+;  regAOut[0] ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  regAOut[1] ; clk        ; 3.763 ; 3.763 ; Rise       ; clk             ;
+;  regAOut[2] ; clk        ; 3.762 ; 3.762 ; Rise       ; clk             ;
+;  regAOut[3] ; clk        ; 3.868 ; 3.868 ; Rise       ; clk             ;
+;  regAOut[4] ; clk        ; 3.864 ; 3.864 ; Rise       ; clk             ;
+;  regAOut[5] ; clk        ; 3.806 ; 3.806 ; Rise       ; clk             ;
+;  regAOut[6] ; clk        ; 4.060 ; 4.060 ; Rise       ; clk             ;
+;  regAOut[7] ; clk        ; 3.973 ; 3.973 ; Rise       ; clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; Asel[0]    ; MuxOut[0]   ; 11.805 ; 11.805 ; 11.805 ; 11.805 ;
+; Asel[0]    ; MuxOut[1]   ; 11.628 ; 11.628 ; 11.628 ; 11.628 ;
+; Asel[0]    ; MuxOut[2]   ; 12.797 ; 12.797 ; 12.797 ; 12.797 ;
+; Asel[0]    ; MuxOut[3]   ; 12.265 ; 12.265 ; 12.265 ; 12.265 ;
+; Asel[0]    ; MuxOut[4]   ; 12.267 ; 12.267 ; 12.267 ; 12.267 ;
+; Asel[0]    ; MuxOut[5]   ; 12.666 ; 12.666 ; 12.666 ; 12.666 ;
+; Asel[0]    ; MuxOut[6]   ; 11.561 ; 11.561 ; 11.561 ; 11.561 ;
+; Asel[0]    ; MuxOut[7]   ; 11.774 ; 11.774 ; 11.774 ; 11.774 ;
+; Asel[1]    ; MuxOut[0]   ; 11.839 ; 11.839 ; 11.839 ; 11.839 ;
+; Asel[1]    ; MuxOut[1]   ; 11.107 ; 11.107 ; 11.107 ; 11.107 ;
+; Asel[1]    ; MuxOut[2]   ; 12.444 ; 12.444 ; 12.444 ; 12.444 ;
+; Asel[1]    ; MuxOut[3]   ; 12.566 ; 12.566 ; 12.566 ; 12.566 ;
+; Asel[1]    ; MuxOut[4]   ; 12.108 ; 12.108 ; 12.108 ; 12.108 ;
+; Asel[1]    ; MuxOut[5]   ; 12.967 ; 12.967 ; 12.967 ; 12.967 ;
+; Asel[1]    ; MuxOut[6]   ; 11.011 ; 11.011 ; 11.011 ; 11.011 ;
+; Asel[1]    ; MuxOut[7]   ; 11.810 ; 11.810 ; 11.810 ; 11.810 ;
+; GND[0]     ; MuxOut[0]   ; 11.252 ;        ;        ; 11.252 ;
+; GND[1]     ; MuxOut[1]   ; 11.487 ;        ;        ; 11.487 ;
+; GND[2]     ; MuxOut[2]   ; 10.932 ;        ;        ; 10.932 ;
+; GND[3]     ; MuxOut[3]   ; 10.183 ;        ;        ; 10.183 ;
+; GND[4]     ; MuxOut[4]   ; 11.231 ;        ;        ; 11.231 ;
+; GND[5]     ; MuxOut[5]   ; 10.855 ;        ;        ; 10.855 ;
+; GND[6]     ; MuxOut[6]   ; 10.294 ;        ;        ; 10.294 ;
+; GND[7]     ; MuxOut[7]   ; 11.087 ;        ;        ; 11.087 ;
+; IROut[0]   ; MuxOut[0]   ; 14.428 ; 14.428 ; 14.428 ; 14.428 ;
+; IROut[0]   ; MuxOut[1]   ; 14.568 ; 14.568 ; 14.568 ; 14.568 ;
+; IROut[0]   ; MuxOut[2]   ; 16.056 ; 16.056 ; 16.056 ; 16.056 ;
+; IROut[0]   ; MuxOut[3]   ; 14.753 ; 14.753 ; 14.753 ; 14.753 ;
+; IROut[0]   ; MuxOut[4]   ; 15.272 ; 15.272 ; 15.272 ; 15.272 ;
+; IROut[0]   ; MuxOut[5]   ; 15.314 ; 15.314 ; 15.314 ; 15.314 ;
+; IROut[0]   ; MuxOut[6]   ; 15.014 ; 15.014 ; 15.014 ; 15.014 ;
+; IROut[0]   ; MuxOut[7]   ; 15.405 ; 15.405 ; 15.405 ; 15.405 ;
+; IROut[0]   ; SubOut[0]   ; 11.270 ; 11.270 ; 11.270 ; 11.270 ;
+; IROut[0]   ; SubOut[1]   ; 12.038 ; 12.038 ; 12.038 ; 12.038 ;
+; IROut[0]   ; SubOut[2]   ; 12.163 ; 12.163 ; 12.163 ; 12.163 ;
+; IROut[0]   ; SubOut[3]   ; 11.913 ; 11.913 ; 11.913 ; 11.913 ;
+; IROut[0]   ; SubOut[4]   ; 12.202 ; 12.202 ; 12.202 ; 12.202 ;
+; IROut[0]   ; SubOut[5]   ; 12.035 ; 12.035 ; 12.035 ; 12.035 ;
+; IROut[0]   ; SubOut[6]   ; 12.200 ; 12.200 ; 12.200 ; 12.200 ;
+; IROut[0]   ; SubOut[7]   ; 12.184 ; 12.184 ; 12.184 ; 12.184 ;
+; IROut[1]   ; MuxOut[1]   ; 13.796 ; 13.796 ; 13.796 ; 13.796 ;
+; IROut[1]   ; MuxOut[2]   ; 15.636 ; 15.636 ; 15.636 ; 15.636 ;
+; IROut[1]   ; MuxOut[3]   ; 14.333 ; 14.333 ; 14.333 ; 14.333 ;
+; IROut[1]   ; MuxOut[4]   ; 14.852 ; 14.852 ; 14.852 ; 14.852 ;
+; IROut[1]   ; MuxOut[5]   ; 14.894 ; 14.894 ; 14.894 ; 14.894 ;
+; IROut[1]   ; MuxOut[6]   ; 14.594 ; 14.594 ; 14.594 ; 14.594 ;
+; IROut[1]   ; MuxOut[7]   ; 14.985 ; 14.985 ; 14.985 ; 14.985 ;
+; IROut[1]   ; SubOut[1]   ; 11.266 ; 11.266 ; 11.266 ; 11.266 ;
+; IROut[1]   ; SubOut[2]   ; 11.743 ; 11.743 ; 11.743 ; 11.743 ;
+; IROut[1]   ; SubOut[3]   ; 11.493 ; 11.493 ; 11.493 ; 11.493 ;
+; IROut[1]   ; SubOut[4]   ; 11.782 ; 11.782 ; 11.782 ; 11.782 ;
+; IROut[1]   ; SubOut[5]   ; 11.615 ; 11.615 ; 11.615 ; 11.615 ;
+; IROut[1]   ; SubOut[6]   ; 11.780 ; 11.780 ; 11.780 ; 11.780 ;
+; IROut[1]   ; SubOut[7]   ; 11.764 ; 11.764 ; 11.764 ; 11.764 ;
+; IROut[2]   ; MuxOut[2]   ; 15.078 ; 15.078 ; 15.078 ; 15.078 ;
+; IROut[2]   ; MuxOut[3]   ; 14.139 ; 14.139 ; 14.139 ; 14.139 ;
+; IROut[2]   ; MuxOut[4]   ; 14.658 ; 14.658 ; 14.658 ; 14.658 ;
+; IROut[2]   ; MuxOut[5]   ; 14.700 ; 14.700 ; 14.700 ; 14.700 ;
+; IROut[2]   ; MuxOut[6]   ; 14.400 ; 14.400 ; 14.400 ; 14.400 ;
+; IROut[2]   ; MuxOut[7]   ; 14.791 ; 14.791 ; 14.791 ; 14.791 ;
+; IROut[2]   ; SubOut[2]   ; 11.185 ; 11.185 ; 11.185 ; 11.185 ;
+; IROut[2]   ; SubOut[3]   ; 11.299 ; 11.299 ; 11.299 ; 11.299 ;
+; IROut[2]   ; SubOut[4]   ; 11.588 ; 11.588 ; 11.588 ; 11.588 ;
+; IROut[2]   ; SubOut[5]   ; 11.421 ; 11.421 ; 11.421 ; 11.421 ;
+; IROut[2]   ; SubOut[6]   ; 11.586 ; 11.586 ; 11.586 ; 11.586 ;
+; IROut[2]   ; SubOut[7]   ; 11.570 ; 11.570 ; 11.570 ; 11.570 ;
+; IROut[3]   ; MuxOut[3]   ; 13.839 ; 13.839 ; 13.839 ; 13.839 ;
+; IROut[3]   ; MuxOut[4]   ; 14.709 ; 14.709 ; 14.709 ; 14.709 ;
+; IROut[3]   ; MuxOut[5]   ; 14.751 ; 14.751 ; 14.751 ; 14.751 ;
+; IROut[3]   ; MuxOut[6]   ; 14.451 ; 14.451 ; 14.451 ; 14.451 ;
+; IROut[3]   ; MuxOut[7]   ; 14.842 ; 14.842 ; 14.842 ; 14.842 ;
+; IROut[3]   ; SubOut[3]   ; 10.999 ; 10.999 ; 10.999 ; 10.999 ;
+; IROut[3]   ; SubOut[4]   ; 11.639 ; 11.639 ; 11.639 ; 11.639 ;
+; IROut[3]   ; SubOut[5]   ; 11.472 ; 11.472 ; 11.472 ; 11.472 ;
+; IROut[3]   ; SubOut[6]   ; 11.637 ; 11.637 ; 11.637 ; 11.637 ;
+; IROut[3]   ; SubOut[7]   ; 11.621 ; 11.621 ; 11.621 ; 11.621 ;
+; IROut[4]   ; MuxOut[4]   ; 14.699 ; 14.699 ; 14.699 ; 14.699 ;
+; IROut[4]   ; MuxOut[5]   ; 15.098 ; 15.098 ; 15.098 ; 15.098 ;
+; IROut[4]   ; MuxOut[6]   ; 14.798 ; 14.798 ; 14.798 ; 14.798 ;
+; IROut[4]   ; MuxOut[7]   ; 15.189 ; 15.189 ; 15.189 ; 15.189 ;
+; IROut[4]   ; SubOut[4]   ; 11.629 ; 11.629 ; 11.629 ; 11.629 ;
+; IROut[4]   ; SubOut[5]   ; 11.819 ; 11.819 ; 11.819 ; 11.819 ;
+; IROut[4]   ; SubOut[6]   ; 11.984 ; 11.984 ; 11.984 ; 11.984 ;
+; IROut[4]   ; SubOut[7]   ; 11.968 ; 11.968 ; 11.968 ; 11.968 ;
+; IROut[5]   ; MuxOut[5]   ; 14.168 ; 14.168 ; 14.168 ; 14.168 ;
+; IROut[5]   ; MuxOut[6]   ; 14.220 ; 14.220 ; 14.220 ; 14.220 ;
+; IROut[5]   ; MuxOut[7]   ; 14.611 ; 14.611 ; 14.611 ; 14.611 ;
+; IROut[5]   ; SubOut[5]   ; 10.889 ; 10.889 ; 10.889 ; 10.889 ;
+; IROut[5]   ; SubOut[6]   ; 11.406 ; 11.406 ; 11.406 ; 11.406 ;
+; IROut[5]   ; SubOut[7]   ; 11.390 ; 11.390 ; 11.390 ; 11.390 ;
+; IROut[6]   ; MuxOut[6]   ; 13.940 ; 13.940 ; 13.940 ; 13.940 ;
+; IROut[6]   ; MuxOut[7]   ; 14.688 ; 14.688 ; 14.688 ; 14.688 ;
+; IROut[6]   ; SubOut[6]   ; 11.126 ; 11.126 ; 11.126 ; 11.126 ;
+; IROut[6]   ; SubOut[7]   ; 11.467 ; 11.467 ; 11.467 ; 11.467 ;
+; IROut[7]   ; MuxOut[7]   ; 13.927 ; 13.927 ; 13.927 ; 13.927 ;
+; IROut[7]   ; SubOut[7]   ; 10.706 ; 10.706 ; 10.706 ; 10.706 ;
+; Input[0]   ; MuxOut[0]   ; 11.843 ; 11.843 ; 11.843 ; 11.843 ;
+; Input[1]   ; MuxOut[1]   ; 11.217 ;        ;        ; 11.217 ;
+; Input[2]   ; MuxOut[2]   ; 12.733 ; 12.733 ; 12.733 ; 12.733 ;
+; Input[3]   ; MuxOut[3]   ; 11.272 ;        ;        ; 11.272 ;
+; Input[4]   ; MuxOut[4]   ; 11.822 ; 11.822 ; 11.822 ; 11.822 ;
+; Input[5]   ; MuxOut[5]   ; 10.919 ;        ;        ; 10.919 ;
+; Input[6]   ; MuxOut[6]   ; 11.539 ; 11.539 ; 11.539 ; 11.539 ;
+; Input[7]   ; MuxOut[7]   ; 11.141 ;        ;        ; 11.141 ;
+; RAMout[0]  ; MuxOut[0]   ; 13.459 ; 13.459 ; 13.459 ; 13.459 ;
+; RAMout[0]  ; MuxOut[1]   ; 13.595 ; 13.595 ; 13.595 ; 13.595 ;
+; RAMout[0]  ; MuxOut[2]   ; 15.083 ; 15.083 ; 15.083 ; 15.083 ;
+; RAMout[0]  ; MuxOut[3]   ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; RAMout[0]  ; MuxOut[4]   ; 14.299 ; 14.299 ; 14.299 ; 14.299 ;
+; RAMout[0]  ; MuxOut[5]   ; 14.341 ; 14.341 ; 14.341 ; 14.341 ;
+; RAMout[0]  ; MuxOut[6]   ; 14.041 ; 14.041 ; 14.041 ; 14.041 ;
+; RAMout[0]  ; MuxOut[7]   ; 14.432 ; 14.432 ; 14.432 ; 14.432 ;
+; RAMout[0]  ; SubOut[0]   ; 10.301 ; 10.301 ; 10.301 ; 10.301 ;
+; RAMout[0]  ; SubOut[1]   ; 11.065 ; 11.065 ; 11.065 ; 11.065 ;
+; RAMout[0]  ; SubOut[2]   ; 11.190 ; 11.190 ; 11.190 ; 11.190 ;
+; RAMout[0]  ; SubOut[3]   ; 10.940 ; 10.940 ; 10.940 ; 10.940 ;
+; RAMout[0]  ; SubOut[4]   ; 11.229 ; 11.229 ; 11.229 ; 11.229 ;
+; RAMout[0]  ; SubOut[5]   ; 11.062 ; 11.062 ; 11.062 ; 11.062 ;
+; RAMout[0]  ; SubOut[6]   ; 11.227 ; 11.227 ; 11.227 ; 11.227 ;
+; RAMout[0]  ; SubOut[7]   ; 11.211 ; 11.211 ; 11.211 ; 11.211 ;
+; RAMout[1]  ; MuxOut[1]   ; 13.267 ; 13.267 ; 13.267 ; 13.267 ;
+; RAMout[1]  ; MuxOut[2]   ; 15.106 ; 15.106 ; 15.106 ; 15.106 ;
+; RAMout[1]  ; MuxOut[3]   ; 13.803 ; 13.803 ; 13.803 ; 13.803 ;
+; RAMout[1]  ; MuxOut[4]   ; 14.322 ; 14.322 ; 14.322 ; 14.322 ;
+; RAMout[1]  ; MuxOut[5]   ; 14.364 ; 14.364 ; 14.364 ; 14.364 ;
+; RAMout[1]  ; MuxOut[6]   ; 14.064 ; 14.064 ; 14.064 ; 14.064 ;
+; RAMout[1]  ; MuxOut[7]   ; 14.455 ; 14.455 ; 14.455 ; 14.455 ;
+; RAMout[1]  ; SubOut[1]   ; 10.737 ; 10.737 ; 10.737 ; 10.737 ;
+; RAMout[1]  ; SubOut[2]   ; 11.213 ; 11.213 ; 11.213 ; 11.213 ;
+; RAMout[1]  ; SubOut[3]   ; 10.963 ; 10.963 ; 10.963 ; 10.963 ;
+; RAMout[1]  ; SubOut[4]   ; 11.252 ; 11.252 ; 11.252 ; 11.252 ;
+; RAMout[1]  ; SubOut[5]   ; 11.085 ; 11.085 ; 11.085 ; 11.085 ;
+; RAMout[1]  ; SubOut[6]   ; 11.250 ; 11.250 ; 11.250 ; 11.250 ;
+; RAMout[1]  ; SubOut[7]   ; 11.234 ; 11.234 ; 11.234 ; 11.234 ;
+; RAMout[2]  ; MuxOut[2]   ; 14.701 ; 14.701 ; 14.701 ; 14.701 ;
+; RAMout[2]  ; MuxOut[3]   ; 13.760 ; 13.760 ; 13.760 ; 13.760 ;
+; RAMout[2]  ; MuxOut[4]   ; 14.279 ; 14.279 ; 14.279 ; 14.279 ;
+; RAMout[2]  ; MuxOut[5]   ; 14.321 ; 14.321 ; 14.321 ; 14.321 ;
+; RAMout[2]  ; MuxOut[6]   ; 14.021 ; 14.021 ; 14.021 ; 14.021 ;
+; RAMout[2]  ; MuxOut[7]   ; 14.412 ; 14.412 ; 14.412 ; 14.412 ;
+; RAMout[2]  ; SubOut[2]   ; 10.808 ; 10.808 ; 10.808 ; 10.808 ;
+; RAMout[2]  ; SubOut[3]   ; 10.920 ; 10.920 ; 10.920 ; 10.920 ;
+; RAMout[2]  ; SubOut[4]   ; 11.209 ; 11.209 ; 11.209 ; 11.209 ;
+; RAMout[2]  ; SubOut[5]   ; 11.042 ; 11.042 ; 11.042 ; 11.042 ;
+; RAMout[2]  ; SubOut[6]   ; 11.207 ; 11.207 ; 11.207 ; 11.207 ;
+; RAMout[2]  ; SubOut[7]   ; 11.191 ; 11.191 ; 11.191 ; 11.191 ;
+; RAMout[3]  ; MuxOut[3]   ; 12.790 ; 12.790 ; 12.790 ; 12.790 ;
+; RAMout[3]  ; MuxOut[4]   ; 13.661 ; 13.661 ; 13.661 ; 13.661 ;
+; RAMout[3]  ; MuxOut[5]   ; 13.703 ; 13.703 ; 13.703 ; 13.703 ;
+; RAMout[3]  ; MuxOut[6]   ; 13.403 ; 13.403 ; 13.403 ; 13.403 ;
+; RAMout[3]  ; MuxOut[7]   ; 13.794 ; 13.794 ; 13.794 ; 13.794 ;
+; RAMout[3]  ; SubOut[3]   ; 9.950  ; 9.950  ; 9.950  ; 9.950  ;
+; RAMout[3]  ; SubOut[4]   ; 10.591 ; 10.591 ; 10.591 ; 10.591 ;
+; RAMout[3]  ; SubOut[5]   ; 10.424 ; 10.424 ; 10.424 ; 10.424 ;
+; RAMout[3]  ; SubOut[6]   ; 10.589 ; 10.589 ; 10.589 ; 10.589 ;
+; RAMout[3]  ; SubOut[7]   ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; RAMout[4]  ; MuxOut[4]   ; 13.898 ; 13.898 ; 13.898 ; 13.898 ;
+; RAMout[4]  ; MuxOut[5]   ; 14.293 ; 14.293 ; 14.293 ; 14.293 ;
+; RAMout[4]  ; MuxOut[6]   ; 13.993 ; 13.993 ; 13.993 ; 13.993 ;
+; RAMout[4]  ; MuxOut[7]   ; 14.384 ; 14.384 ; 14.384 ; 14.384 ;
+; RAMout[4]  ; SubOut[4]   ; 10.828 ; 10.828 ; 10.828 ; 10.828 ;
+; RAMout[4]  ; SubOut[5]   ; 11.014 ; 11.014 ; 11.014 ; 11.014 ;
+; RAMout[4]  ; SubOut[6]   ; 11.179 ; 11.179 ; 11.179 ; 11.179 ;
+; RAMout[4]  ; SubOut[7]   ; 11.163 ; 11.163 ; 11.163 ; 11.163 ;
+; RAMout[5]  ; MuxOut[5]   ; 13.285 ; 13.285 ; 13.285 ; 13.285 ;
+; RAMout[5]  ; MuxOut[6]   ; 13.336 ; 13.336 ; 13.336 ; 13.336 ;
+; RAMout[5]  ; MuxOut[7]   ; 13.727 ; 13.727 ; 13.727 ; 13.727 ;
+; RAMout[5]  ; SubOut[5]   ; 10.006 ; 10.006 ; 10.006 ; 10.006 ;
+; RAMout[5]  ; SubOut[6]   ; 10.522 ; 10.522 ; 10.522 ; 10.522 ;
+; RAMout[5]  ; SubOut[7]   ; 10.506 ; 10.506 ; 10.506 ; 10.506 ;
+; RAMout[6]  ; MuxOut[6]   ; 13.489 ; 13.489 ; 13.489 ; 13.489 ;
+; RAMout[6]  ; MuxOut[7]   ; 14.233 ; 14.233 ; 14.233 ; 14.233 ;
+; RAMout[6]  ; SubOut[6]   ; 10.675 ; 10.675 ; 10.675 ; 10.675 ;
+; RAMout[6]  ; SubOut[7]   ; 11.012 ; 11.012 ; 11.012 ; 11.012 ;
+; RAMout[7]  ; MuxOut[7]   ; 13.424 ; 13.424 ; 13.424 ; 13.424 ;
+; RAMout[7]  ; SubOut[7]   ; 10.203 ; 10.203 ; 10.203 ; 10.203 ;
+; sub        ; MuxOut[0]   ; 13.731 ; 13.731 ; 13.731 ; 13.731 ;
+; sub        ; MuxOut[1]   ; 13.869 ; 13.869 ; 13.869 ; 13.869 ;
+; sub        ; MuxOut[2]   ; 15.657 ; 15.657 ; 15.657 ; 15.657 ;
+; sub        ; MuxOut[3]   ; 14.354 ; 14.354 ; 14.354 ; 14.354 ;
+; sub        ; MuxOut[4]   ; 14.873 ; 14.873 ; 14.873 ; 14.873 ;
+; sub        ; MuxOut[5]   ; 14.915 ; 14.915 ; 14.915 ; 14.915 ;
+; sub        ; MuxOut[6]   ; 14.615 ; 14.615 ; 14.615 ; 14.615 ;
+; sub        ; MuxOut[7]   ; 15.006 ; 15.006 ; 15.006 ; 15.006 ;
+; sub        ; SubOut[0]   ; 10.573 ; 10.573 ; 10.573 ; 10.573 ;
+; sub        ; SubOut[1]   ; 11.339 ; 11.339 ; 11.339 ; 11.339 ;
+; sub        ; SubOut[2]   ; 11.764 ; 11.764 ; 11.764 ; 11.764 ;
+; sub        ; SubOut[3]   ; 11.514 ; 11.514 ; 11.514 ; 11.514 ;
+; sub        ; SubOut[4]   ; 11.803 ; 11.803 ; 11.803 ; 11.803 ;
+; sub        ; SubOut[5]   ; 11.636 ; 11.636 ; 11.636 ; 11.636 ;
+; sub        ; SubOut[6]   ; 11.801 ; 11.801 ; 11.801 ; 11.801 ;
+; sub        ; SubOut[7]   ; 11.785 ; 11.785 ; 11.785 ; 11.785 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; Asel[0]    ; MuxOut[0]   ; 5.811 ; 5.811 ; 5.811 ; 5.811 ;
+; Asel[0]    ; MuxOut[1]   ; 5.612 ; 5.612 ; 5.612 ; 5.612 ;
+; Asel[0]    ; MuxOut[2]   ; 6.215 ; 6.215 ; 6.215 ; 6.215 ;
+; Asel[0]    ; MuxOut[3]   ; 5.627 ; 5.627 ; 5.627 ; 5.627 ;
+; Asel[0]    ; MuxOut[4]   ; 6.018 ; 6.018 ; 6.018 ; 6.018 ;
+; Asel[0]    ; MuxOut[5]   ; 5.487 ; 5.487 ; 5.487 ; 5.487 ;
+; Asel[0]    ; MuxOut[6]   ; 5.739 ; 5.739 ; 5.739 ; 5.739 ;
+; Asel[0]    ; MuxOut[7]   ; 5.651 ; 5.651 ; 5.651 ; 5.651 ;
+; Asel[1]    ; MuxOut[0]   ; 5.438 ; 5.438 ; 5.438 ; 5.438 ;
+; Asel[1]    ; MuxOut[1]   ; 5.604 ; 5.604 ; 5.604 ; 5.604 ;
+; Asel[1]    ; MuxOut[2]   ; 5.874 ; 5.874 ; 5.874 ; 5.874 ;
+; Asel[1]    ; MuxOut[3]   ; 6.120 ; 6.120 ; 6.120 ; 6.120 ;
+; Asel[1]    ; MuxOut[4]   ; 5.823 ; 5.823 ; 5.823 ; 5.823 ;
+; Asel[1]    ; MuxOut[5]   ; 6.288 ; 6.288 ; 6.288 ; 6.288 ;
+; Asel[1]    ; MuxOut[6]   ; 5.350 ; 5.350 ; 5.350 ; 5.350 ;
+; Asel[1]    ; MuxOut[7]   ; 5.867 ; 5.867 ; 5.867 ; 5.867 ;
+; GND[0]     ; MuxOut[0]   ; 5.610 ;       ;       ; 5.610 ;
+; GND[1]     ; MuxOut[1]   ; 5.695 ;       ;       ; 5.695 ;
+; GND[2]     ; MuxOut[2]   ; 5.505 ;       ;       ; 5.505 ;
+; GND[3]     ; MuxOut[3]   ; 5.200 ;       ;       ; 5.200 ;
+; GND[4]     ; MuxOut[4]   ; 5.624 ;       ;       ; 5.624 ;
+; GND[5]     ; MuxOut[5]   ; 5.462 ;       ;       ; 5.462 ;
+; GND[6]     ; MuxOut[6]   ; 5.224 ;       ;       ; 5.224 ;
+; GND[7]     ; MuxOut[7]   ; 5.537 ;       ;       ; 5.537 ;
+; IROut[0]   ; MuxOut[0]   ; 5.538 ; 6.748 ; 6.748 ; 5.538 ;
+; IROut[0]   ; MuxOut[1]   ; 6.785 ; 6.785 ; 6.785 ; 6.785 ;
+; IROut[0]   ; MuxOut[2]   ; 7.386 ; 7.386 ; 7.386 ; 7.386 ;
+; IROut[0]   ; MuxOut[3]   ; 6.900 ; 6.900 ; 6.900 ; 6.900 ;
+; IROut[0]   ; MuxOut[4]   ; 7.118 ; 7.118 ; 7.118 ; 7.118 ;
+; IROut[0]   ; MuxOut[5]   ; 7.138 ; 7.138 ; 7.138 ; 7.138 ;
+; IROut[0]   ; MuxOut[6]   ; 7.009 ; 7.009 ; 7.009 ; 7.009 ;
+; IROut[0]   ; MuxOut[7]   ; 7.174 ; 7.174 ; 7.174 ; 7.174 ;
+; IROut[0]   ; SubOut[0]   ; 5.663 ; 5.663 ; 5.663 ; 5.663 ;
+; IROut[0]   ; SubOut[1]   ; 5.908 ; 5.908 ; 5.908 ; 5.908 ;
+; IROut[0]   ; SubOut[2]   ; 5.966 ; 5.966 ; 5.966 ; 5.966 ;
+; IROut[0]   ; SubOut[3]   ; 5.855 ; 5.855 ; 5.855 ; 5.855 ;
+; IROut[0]   ; SubOut[4]   ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; IROut[0]   ; SubOut[5]   ; 5.886 ; 5.886 ; 5.886 ; 5.886 ;
+; IROut[0]   ; SubOut[6]   ; 6.034 ; 6.034 ; 6.034 ; 6.034 ;
+; IROut[0]   ; SubOut[7]   ; 5.953 ; 5.953 ; 5.953 ; 5.953 ;
+; IROut[1]   ; MuxOut[1]   ; 5.669 ; 5.669 ; 5.669 ; 5.669 ;
+; IROut[1]   ; MuxOut[2]   ; 7.235 ; 7.235 ; 7.235 ; 7.235 ;
+; IROut[1]   ; MuxOut[3]   ; 6.749 ; 6.749 ; 6.749 ; 6.749 ;
+; IROut[1]   ; MuxOut[4]   ; 6.967 ; 6.967 ; 6.967 ; 6.967 ;
+; IROut[1]   ; MuxOut[5]   ; 6.987 ; 6.987 ; 6.987 ; 6.987 ;
+; IROut[1]   ; MuxOut[6]   ; 6.858 ; 6.858 ; 6.858 ; 6.858 ;
+; IROut[1]   ; MuxOut[7]   ; 7.023 ; 7.023 ; 7.023 ; 7.023 ;
+; IROut[1]   ; SubOut[1]   ; 5.654 ; 5.654 ; 5.654 ; 5.654 ;
+; IROut[1]   ; SubOut[2]   ; 5.815 ; 5.815 ; 5.815 ; 5.815 ;
+; IROut[1]   ; SubOut[3]   ; 5.704 ; 5.704 ; 5.704 ; 5.704 ;
+; IROut[1]   ; SubOut[4]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; IROut[1]   ; SubOut[5]   ; 5.735 ; 5.735 ; 5.735 ; 5.735 ;
+; IROut[1]   ; SubOut[6]   ; 5.883 ; 5.883 ; 5.883 ; 5.883 ;
+; IROut[1]   ; SubOut[7]   ; 5.802 ; 5.802 ; 5.802 ; 5.802 ;
+; IROut[2]   ; MuxOut[2]   ; 5.911 ; 7.067 ; 7.067 ; 5.911 ;
+; IROut[2]   ; MuxOut[3]   ; 6.680 ; 6.680 ; 6.680 ; 6.680 ;
+; IROut[2]   ; MuxOut[4]   ; 6.898 ; 6.898 ; 6.898 ; 6.898 ;
+; IROut[2]   ; MuxOut[5]   ; 6.918 ; 6.918 ; 6.918 ; 6.918 ;
+; IROut[2]   ; MuxOut[6]   ; 6.789 ; 6.789 ; 6.789 ; 6.789 ;
+; IROut[2]   ; MuxOut[7]   ; 6.954 ; 6.954 ; 6.954 ; 6.954 ;
+; IROut[2]   ; SubOut[2]   ; 5.647 ; 5.647 ; 5.647 ; 5.647 ;
+; IROut[2]   ; SubOut[3]   ; 5.635 ; 5.635 ; 5.635 ; 5.635 ;
+; IROut[2]   ; SubOut[4]   ; 5.731 ; 5.731 ; 5.731 ; 5.731 ;
+; IROut[2]   ; SubOut[5]   ; 5.666 ; 5.666 ; 5.666 ; 5.666 ;
+; IROut[2]   ; SubOut[6]   ; 5.814 ; 5.814 ; 5.814 ; 5.814 ;
+; IROut[2]   ; SubOut[7]   ; 5.733 ; 5.733 ; 5.733 ; 5.733 ;
+; IROut[3]   ; MuxOut[3]   ; 6.133 ; 6.133 ; 6.133 ; 6.133 ;
+; IROut[3]   ; MuxOut[4]   ; 6.881 ; 6.881 ; 6.881 ; 6.881 ;
+; IROut[3]   ; MuxOut[5]   ; 6.901 ; 6.901 ; 6.901 ; 6.901 ;
+; IROut[3]   ; MuxOut[6]   ; 6.772 ; 6.772 ; 6.772 ; 6.772 ;
+; IROut[3]   ; MuxOut[7]   ; 6.937 ; 6.937 ; 6.937 ; 6.937 ;
+; IROut[3]   ; SubOut[3]   ; 5.513 ; 5.513 ; 5.513 ; 5.513 ;
+; IROut[3]   ; SubOut[4]   ; 5.714 ; 5.714 ; 5.714 ; 5.714 ;
+; IROut[3]   ; SubOut[5]   ; 5.649 ; 5.649 ; 5.649 ; 5.649 ;
+; IROut[3]   ; SubOut[6]   ; 5.797 ; 5.797 ; 5.797 ; 5.797 ;
+; IROut[3]   ; SubOut[7]   ; 5.716 ; 5.716 ; 5.716 ; 5.716 ;
+; IROut[4]   ; MuxOut[4]   ; 5.808 ; 6.869 ; 6.869 ; 5.808 ;
+; IROut[4]   ; MuxOut[5]   ; 6.992 ; 6.992 ; 6.992 ; 6.992 ;
+; IROut[4]   ; MuxOut[6]   ; 6.863 ; 6.863 ; 6.863 ; 6.863 ;
+; IROut[4]   ; MuxOut[7]   ; 7.028 ; 7.028 ; 7.028 ; 7.028 ;
+; IROut[4]   ; SubOut[4]   ; 5.702 ; 5.702 ; 5.702 ; 5.702 ;
+; IROut[4]   ; SubOut[5]   ; 5.740 ; 5.740 ; 5.740 ; 5.740 ;
+; IROut[4]   ; SubOut[6]   ; 5.888 ; 5.888 ; 5.888 ; 5.888 ;
+; IROut[4]   ; SubOut[7]   ; 5.807 ; 5.807 ; 5.807 ; 5.807 ;
+; IROut[5]   ; MuxOut[5]   ; 6.267 ; 6.267 ; 6.267 ; 6.267 ;
+; IROut[5]   ; MuxOut[6]   ; 6.657 ; 6.657 ; 6.657 ; 6.657 ;
+; IROut[5]   ; MuxOut[7]   ; 6.822 ; 6.822 ; 6.822 ; 6.822 ;
+; IROut[5]   ; SubOut[5]   ; 5.431 ; 5.431 ; 5.431 ; 5.431 ;
+; IROut[5]   ; SubOut[6]   ; 5.682 ; 5.682 ; 5.682 ; 5.682 ;
+; IROut[5]   ; SubOut[7]   ; 5.601 ; 5.601 ; 5.601 ; 5.601 ;
+; IROut[6]   ; MuxOut[6]   ; 5.553 ; 6.581 ; 6.581 ; 5.553 ;
+; IROut[6]   ; MuxOut[7]   ; 6.849 ; 6.849 ; 6.849 ; 6.849 ;
+; IROut[6]   ; SubOut[6]   ; 5.606 ; 5.606 ; 5.606 ; 5.606 ;
+; IROut[6]   ; SubOut[7]   ; 5.628 ; 5.628 ; 5.628 ; 5.628 ;
+; IROut[7]   ; MuxOut[7]   ; 5.710 ; 5.710 ; 5.710 ; 5.710 ;
+; IROut[7]   ; SubOut[7]   ; 5.379 ; 5.379 ; 5.379 ; 5.379 ;
+; Input[0]   ; MuxOut[0]   ; 5.800 ; 5.800 ; 5.800 ; 5.800 ;
+; Input[1]   ; MuxOut[1]   ; 5.634 ;       ;       ; 5.634 ;
+; Input[2]   ; MuxOut[2]   ; 6.165 ; 6.165 ; 6.165 ; 6.165 ;
+; Input[3]   ; MuxOut[3]   ; 5.658 ;       ;       ; 5.658 ;
+; Input[4]   ; MuxOut[4]   ; 5.822 ; 5.822 ; 5.822 ; 5.822 ;
+; Input[5]   ; MuxOut[5]   ; 5.531 ;       ;       ; 5.531 ;
+; Input[6]   ; MuxOut[6]   ; 5.687 ; 5.687 ; 5.687 ; 5.687 ;
+; Input[7]   ; MuxOut[7]   ; 5.553 ;       ;       ; 5.553 ;
+; RAMout[0]  ; MuxOut[0]   ; 6.382 ; 6.382 ; 6.382 ; 6.382 ;
+; RAMout[0]  ; MuxOut[1]   ; 6.421 ; 6.421 ; 6.421 ; 6.421 ;
+; RAMout[0]  ; MuxOut[2]   ; 7.022 ; 7.022 ; 7.022 ; 7.022 ;
+; RAMout[0]  ; MuxOut[3]   ; 6.536 ; 6.536 ; 6.536 ; 6.536 ;
+; RAMout[0]  ; MuxOut[4]   ; 6.754 ; 6.754 ; 6.754 ; 6.754 ;
+; RAMout[0]  ; MuxOut[5]   ; 6.774 ; 6.774 ; 6.774 ; 6.774 ;
+; RAMout[0]  ; MuxOut[6]   ; 6.645 ; 6.645 ; 6.645 ; 6.645 ;
+; RAMout[0]  ; MuxOut[7]   ; 6.810 ; 6.810 ; 6.810 ; 6.810 ;
+; RAMout[0]  ; SubOut[0]   ; 5.297 ; 5.297 ; 5.297 ; 5.297 ;
+; RAMout[0]  ; SubOut[1]   ; 5.544 ; 5.544 ; 5.544 ; 5.544 ;
+; RAMout[0]  ; SubOut[2]   ; 5.602 ; 5.602 ; 5.602 ; 5.602 ;
+; RAMout[0]  ; SubOut[3]   ; 5.491 ; 5.491 ; 5.491 ; 5.491 ;
+; RAMout[0]  ; SubOut[4]   ; 5.587 ; 5.587 ; 5.587 ; 5.587 ;
+; RAMout[0]  ; SubOut[5]   ; 5.522 ; 5.522 ; 5.522 ; 5.522 ;
+; RAMout[0]  ; SubOut[6]   ; 5.670 ; 5.670 ; 5.670 ; 5.670 ;
+; RAMout[0]  ; SubOut[7]   ; 5.589 ; 5.589 ; 5.589 ; 5.589 ;
+; RAMout[1]  ; MuxOut[1]   ; 6.325 ; 6.325 ; 6.325 ; 6.325 ;
+; RAMout[1]  ; MuxOut[2]   ; 7.031 ; 7.031 ; 7.031 ; 7.031 ;
+; RAMout[1]  ; MuxOut[3]   ; 6.545 ; 6.545 ; 6.545 ; 6.545 ;
+; RAMout[1]  ; MuxOut[4]   ; 6.763 ; 6.763 ; 6.763 ; 6.763 ;
+; RAMout[1]  ; MuxOut[5]   ; 6.783 ; 6.783 ; 6.783 ; 6.783 ;
+; RAMout[1]  ; MuxOut[6]   ; 6.654 ; 6.654 ; 6.654 ; 6.654 ;
+; RAMout[1]  ; MuxOut[7]   ; 6.819 ; 6.819 ; 6.819 ; 6.819 ;
+; RAMout[1]  ; SubOut[1]   ; 5.448 ; 5.448 ; 5.448 ; 5.448 ;
+; RAMout[1]  ; SubOut[2]   ; 5.611 ; 5.611 ; 5.611 ; 5.611 ;
+; RAMout[1]  ; SubOut[3]   ; 5.500 ; 5.500 ; 5.500 ; 5.500 ;
+; RAMout[1]  ; SubOut[4]   ; 5.596 ; 5.596 ; 5.596 ; 5.596 ;
+; RAMout[1]  ; SubOut[5]   ; 5.531 ; 5.531 ; 5.531 ; 5.531 ;
+; RAMout[1]  ; SubOut[6]   ; 5.679 ; 5.679 ; 5.679 ; 5.679 ;
+; RAMout[1]  ; SubOut[7]   ; 5.598 ; 5.598 ; 5.598 ; 5.598 ;
+; RAMout[2]  ; MuxOut[2]   ; 6.925 ; 6.925 ; 6.925 ; 6.925 ;
+; RAMout[2]  ; MuxOut[3]   ; 6.539 ; 6.539 ; 6.539 ; 6.539 ;
+; RAMout[2]  ; MuxOut[4]   ; 6.757 ; 6.757 ; 6.757 ; 6.757 ;
+; RAMout[2]  ; MuxOut[5]   ; 6.777 ; 6.777 ; 6.777 ; 6.777 ;
+; RAMout[2]  ; MuxOut[6]   ; 6.648 ; 6.648 ; 6.648 ; 6.648 ;
+; RAMout[2]  ; MuxOut[7]   ; 6.813 ; 6.813 ; 6.813 ; 6.813 ;
+; RAMout[2]  ; SubOut[2]   ; 5.505 ; 5.505 ; 5.505 ; 5.505 ;
+; RAMout[2]  ; SubOut[3]   ; 5.494 ; 5.494 ; 5.494 ; 5.494 ;
+; RAMout[2]  ; SubOut[4]   ; 5.590 ; 5.590 ; 5.590 ; 5.590 ;
+; RAMout[2]  ; SubOut[5]   ; 5.525 ; 5.525 ; 5.525 ; 5.525 ;
+; RAMout[2]  ; SubOut[6]   ; 5.673 ; 5.673 ; 5.673 ; 5.673 ;
+; RAMout[2]  ; SubOut[7]   ; 5.592 ; 5.592 ; 5.592 ; 5.592 ;
+; RAMout[3]  ; MuxOut[3]   ; 6.154 ; 6.154 ; 6.154 ; 6.154 ;
+; RAMout[3]  ; MuxOut[4]   ; 6.475 ; 6.475 ; 6.475 ; 6.475 ;
+; RAMout[3]  ; MuxOut[5]   ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; RAMout[3]  ; MuxOut[6]   ; 6.366 ; 6.366 ; 6.366 ; 6.366 ;
+; RAMout[3]  ; MuxOut[7]   ; 6.531 ; 6.531 ; 6.531 ; 6.531 ;
+; RAMout[3]  ; SubOut[3]   ; 5.109 ; 5.109 ; 5.109 ; 5.109 ;
+; RAMout[3]  ; SubOut[4]   ; 5.308 ; 5.308 ; 5.308 ; 5.308 ;
+; RAMout[3]  ; SubOut[5]   ; 5.243 ; 5.243 ; 5.243 ; 5.243 ;
+; RAMout[3]  ; SubOut[6]   ; 5.391 ; 5.391 ; 5.391 ; 5.391 ;
+; RAMout[3]  ; SubOut[7]   ; 5.310 ; 5.310 ; 5.310 ; 5.310 ;
+; RAMout[4]  ; MuxOut[4]   ; 6.600 ; 6.600 ; 6.600 ; 6.600 ;
+; RAMout[4]  ; MuxOut[5]   ; 6.725 ; 6.725 ; 6.725 ; 6.725 ;
+; RAMout[4]  ; MuxOut[6]   ; 6.596 ; 6.596 ; 6.596 ; 6.596 ;
+; RAMout[4]  ; MuxOut[7]   ; 6.761 ; 6.761 ; 6.761 ; 6.761 ;
+; RAMout[4]  ; SubOut[4]   ; 5.433 ; 5.433 ; 5.433 ; 5.433 ;
+; RAMout[4]  ; SubOut[5]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[4]  ; SubOut[6]   ; 5.621 ; 5.621 ; 5.621 ; 5.621 ;
+; RAMout[4]  ; SubOut[7]   ; 5.540 ; 5.540 ; 5.540 ; 5.540 ;
+; RAMout[5]  ; MuxOut[5]   ; 6.383 ; 6.383 ; 6.383 ; 6.383 ;
+; RAMout[5]  ; MuxOut[6]   ; 6.359 ; 6.359 ; 6.359 ; 6.359 ;
+; RAMout[5]  ; MuxOut[7]   ; 6.524 ; 6.524 ; 6.524 ; 6.524 ;
+; RAMout[5]  ; SubOut[5]   ; 5.131 ; 5.131 ; 5.131 ; 5.131 ;
+; RAMout[5]  ; SubOut[6]   ; 5.384 ; 5.384 ; 5.384 ; 5.384 ;
+; RAMout[5]  ; SubOut[7]   ; 5.303 ; 5.303 ; 5.303 ; 5.303 ;
+; RAMout[6]  ; MuxOut[6]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[6]  ; MuxOut[7]   ; 6.694 ; 6.694 ; 6.694 ; 6.694 ;
+; RAMout[6]  ; SubOut[6]   ; 5.449 ; 5.449 ; 5.449 ; 5.449 ;
+; RAMout[6]  ; SubOut[7]   ; 5.473 ; 5.473 ; 5.473 ; 5.473 ;
+; RAMout[7]  ; MuxOut[7]   ; 6.424 ; 6.424 ; 6.424 ; 6.424 ;
+; RAMout[7]  ; SubOut[7]   ; 5.203 ; 5.203 ; 5.203 ; 5.203 ;
+; sub        ; MuxOut[0]   ; 6.495 ; 6.495 ; 6.495 ; 6.495 ;
+; sub        ; MuxOut[1]   ; 6.429 ; 6.429 ; 6.429 ; 6.429 ;
+; sub        ; MuxOut[2]   ; 7.030 ; 7.030 ; 7.030 ; 7.030 ;
+; sub        ; MuxOut[3]   ; 6.405 ; 6.405 ; 6.405 ; 6.405 ;
+; sub        ; MuxOut[4]   ; 6.728 ; 6.728 ; 6.728 ; 6.728 ;
+; sub        ; MuxOut[5]   ; 6.561 ; 6.561 ; 6.561 ; 6.561 ;
+; sub        ; MuxOut[6]   ; 6.535 ; 6.535 ; 6.535 ; 6.535 ;
+; sub        ; MuxOut[7]   ; 6.611 ; 6.611 ; 6.611 ; 6.611 ;
+; sub        ; SubOut[0]   ; 5.410 ; 5.410 ; 5.410 ; 5.410 ;
+; sub        ; SubOut[1]   ; 5.552 ; 5.552 ; 5.552 ; 5.552 ;
+; sub        ; SubOut[2]   ; 5.610 ; 5.610 ; 5.610 ; 5.610 ;
+; sub        ; SubOut[3]   ; 5.360 ; 5.360 ; 5.360 ; 5.360 ;
+; sub        ; SubOut[4]   ; 5.561 ; 5.561 ; 5.561 ; 5.561 ;
+; sub        ; SubOut[5]   ; 5.309 ; 5.309 ; 5.309 ; 5.309 ;
+; sub        ; SubOut[6]   ; 5.560 ; 5.560 ; 5.560 ; 5.560 ;
+; sub        ; SubOut[7]   ; 5.390 ; 5.390 ; 5.390 ; 5.390 ;
++------------+-------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 37    ; 37   ;
+; Unconstrained Input Port Paths  ; 320   ; 320  ;
+; Unconstrained Output Ports      ; 26    ; 26   ;
+; Unconstrained Output Port Paths ; 209   ; 209  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Nov 16 17:44:17 2015
+Info: Command: quartus_sta InstructionSetOperations -c InstructionSetOperations
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'InstructionSetOperations.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -11.407 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -9.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 426 megabytes
+    Info: Processing ended: Mon Nov 16 17:44:20 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,57 @@
+module InstructionCycleOperations_tb();
+  
+  reg clk,clear,IRload,PCload,IMPsel,MeminstSel;
+  reg  [7:0]IRin; 
+  
+  wire [4:0]MeminstOut;
+  wire [2:0]IR75;
+  wire [4:0]IR40;
+  wire [7:0]IROut;
+  wire [4:0]PCOut;
+  wire [4:0]IMPmuxOut;
+  wire [4:0]IncOut;
+  
+InstructionCycleOperations ICO(clk,clear,IRload,PCload,IMPsel,MeminstSel,
+IRin,MeminstOut,IR75,IR40,IROut,PCOut,IMPmuxOut,IncOut);
+
+
+initial 
+ begin 
+   clear <= 0;
+   @(posedge clk);
+   @(negedge clk);
+   clear <= 1;
+ end 
+ 
+
+
+ initial 
+   begin 
+     $display(" clk | clear | IRload |  IRin    |  IRout   | IR75 |  IR40  | IMPsel | IMPmuxOut | PCload |  PCOut  | IncOut | MeminstSel | MeminstOut |");
+    $monitor("  %b  |   %b   |   %b    | %b | %b | %b  | %b  |   %b    |   %b   |   %b    |  %b  |  %b |     %b      |   %b    |", clk,clear,IRload,IRin,IROut,IR75,IR40,IMPsel,IMPmuxOut,PCload,PCOut,IncOut,MeminstSel,MeminstOut);
+   end 
+ 
+initial 
+ begin 
+
+
+  #2 IRin = 8'b10100110; IRload = 0; IMPsel = 0; PCload = 0; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 0; PCload = 0; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 1; PCload = 0; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 1; PCload = 1; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 0; PCload = 1; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 0; PCload = 1; MeminstSel = 0; 
+  #2 IRin = 8'b10100110; IRload = 1; IMPsel = 1; PCload = 1; MeminstSel = 1; 
+  #2 $finish;
+ end 
+
+
+ initial 
+  begin 
+   clk = 0;
+   forever #1 clk = ~clk;
+  end 
+
+
+
+endmodule 

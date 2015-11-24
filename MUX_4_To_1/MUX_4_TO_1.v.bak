@@ -1,0 +1,26 @@
+module MUX_4_TO_1(intA,intB,intC,intD,Sel,Out);
+ parameter b = 8;
+ input [b-1:0]intA,intB,intC,intD;
+ input [1:0]Sel;
+ output reg[b-1:0]Out;
+
+
+
+always @(Sel)
+begin 
+case(Sel)
+2'b00:Out = intA;
+2'b01:Out = intB;
+2'b10:Out = intC;
+2'b11:Out = intD;
+endcase 
+
+end 
+endmodule
+
+/*
+ parameter n = 2, b= 8;
+ input [b-1:0]intA[(2**n)-1:0];
+ input [n-1:0]Sel;
+ output reg[b-1:0]Out;
+ */

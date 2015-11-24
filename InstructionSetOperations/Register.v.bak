@@ -1,0 +1,28 @@
+module Register(Clock,Clear,Load,in,A_Reg);
+
+ parameter n = 8;
+ 
+ input Clock,Clear,Load;
+ input [n-1:0]in;
+ output reg[n-1:0]A_Reg;
+
+
+
+always @( posedge Clock, negedge Clear )
+begin 
+
+ if(!Clear)
+ A_Reg <= 0;
+ else
+ 
+ begin  
+ if(Load)
+ A_Reg <= in;  
+ else
+ A_Reg <= A_Reg;
+ end 
+ 
+end 
+
+
+endmodule 
