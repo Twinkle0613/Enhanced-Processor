@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DataPath
-Tue Nov 24 15:32:39 2015
+Tue Dec 01 15:15:20 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -53,7 +53,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 24 15:32:39 2015   ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 01 15:15:20 2015   ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                      ; DataPath                                ;
 ; Top-level Entity Name              ; DataPath                                ;
@@ -214,8 +214,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; |DataPath                           ; 518 (32)          ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 53   ; 0            ; |DataPath                                                 ; work         ;
 ;    |InstructionCycleOperations:ICO| ; 10 (0)            ; 13 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO                  ;              ;
 ;       |MUX_2_To_1:Memi|             ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO|MUX_2_To_1:Memi  ; work         ;
-;       |Register:IR|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO|Register:IR      ; work         ;
-;       |Register:PC|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO|Register:PC      ; work         ;
+;       |Register:IR|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO|Register:IR      ;              ;
+;       |Register:PC|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionCycleOperations:ICO|Register:PC      ;              ;
 ;    |InstructionSetOperations:ISO|   ; 36 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionSetOperations:ISO                    ; work         ;
 ;       |AddSubtract:AddSub|          ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionSetOperations:ISO|AddSubtract:AddSub ; work         ;
 ;       |Register:regA|               ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DataPath|InstructionSetOperations:ISO|Register:regA      ; work         ;
@@ -458,14 +458,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "InstructionSetOperations:ISO"                                                                                                                                                          ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; GND       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; GND[7..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "InstructionSetOperations:ISO" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; GND  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
 
 
 +-------------------------------+
@@ -474,7 +473,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Nov 24 15:32:37 2015
+    Info: Processing started: Tue Dec 01 15:15:17 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DataPath -c DataPath
 Info: Found 1 design units, including 1 entities, in source file addsubtract.v
     Info: Found entity 1: AddSubtract
@@ -514,7 +513,6 @@ Warning (10235): Verilog HDL Always Construct warning at mux_4_to_1.v(13): varia
 Warning (10235): Verilog HDL Always Construct warning at mux_4_to_1.v(14): variable "intC" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at mux_4_to_1.v(15): variable "intD" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info: Elaborating entity "AddSubtract" for hierarchy "InstructionSetOperations:ISO|AddSubtract:AddSub"
-Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "out[0]" is stuck at GND
     Warning (13410): Pin "out[1]" is stuck at GND
@@ -528,10 +526,10 @@ Info: Implemented 579 device resources after synthesis - the final resource coun
     Info: Implemented 19 input pins
     Info: Implemented 34 output pins
     Info: Implemented 526 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 198 megabytes
-    Info: Processing ended: Tue Nov 24 15:32:39 2015
-    Info: Elapsed time: 00:00:02
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 202 megabytes
+    Info: Processing ended: Tue Dec 01 15:15:20 2015
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -20,42 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-InstructionCycleOperations
-# storage
-db|DataPath.(1).cnf
-db|DataPath.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-instructioncycleoperations.v
-a444d9f6e8fa37c9442b86f999b1a7
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-InstructionCycleOperations:ICO
-}
-# macro_sequence
-
-# end
-# entity
 Register
 # storage
 db|DataPath.(2).cnf
@@ -405,7 +369,7 @@ ON
 # case_sensitive
 # source_file
 datapath.v
-b43cc0ebd27f556dbabb8222ef0d9a5
+1a93a96c82fa953c7976dc5869bc70dc
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -425,6 +389,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+InstructionCycleOperations
+# storage
+db|DataPath.(1).cnf
+db|DataPath.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+instructioncycleoperations.v
+9175a99fa14f5b4e6f23b87fd9fb82
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+InstructionCycleOperations:ICO
 }
 # macro_sequence
 
