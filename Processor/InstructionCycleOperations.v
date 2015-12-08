@@ -1,4 +1,4 @@
-  module InstructionCycleOperations(clk,clear,IRload,PCload,IMPsel,MeminstSel,IRin,MeminstOut,IR75);
+  module InstructionCycleOperations(clk,clear,IRload,PCload,IMPsel,MeminstSel,IRin,MeminstOut,IR75,IR40);
 //   IR40,IROut,PCOut,IMPmuxOut,IncOut);
  
  
@@ -7,13 +7,13 @@
   
   output [4:0]MeminstOut;
   output [2:0]IR75;
- // output [4:0]IR40;
+  output [4:0]IR40;
   
   wire [7:0]IROut;
   wire [4:0]PCOut;
   wire [4:0]IMPmuxOut;
   wire [4:0]IncOut;
-  wire [4:0]IR40;
+ // wire [4:0]IR40;
   assign IR75[2:0] = IROut[7:5];
   assign IR40 = IROut[4:0];
   

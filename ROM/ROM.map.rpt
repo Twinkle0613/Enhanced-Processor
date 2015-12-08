@@ -1,0 +1,916 @@
+Analysis & Synthesis report for ROM
+Tue Dec 08 16:22:20 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |ROM
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Dec 08 16:22:20 2015   ;
+; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
+; Revision Name                      ; ROM                                     ;
+; Top-level Entity Name              ; ROM                                     ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; 674                                     ;
+;     Total combinational functions  ; 674                                     ;
+;     Dedicated logic registers      ; 0                                       ;
+; Total registers                    ; 0                                       ;
+; Total pins                         ; 24                                      ;
+; Total virtual pins                 ; 0                                       ;
+; Total memory bits                  ; 0                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                       ;
+; Total PLLs                         ; 0                                       ;
++------------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; ROM                ; ROM                ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+
+; ROM.v                            ; yes             ; User Verilog HDL File  ; C:/Users/Student/Desktop/Enhanced Processor/ROM/ROM.v ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 674        ;
+;                                             ;            ;
+; Total combinational functions               ; 674        ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 320        ;
+;     -- 3 input functions                    ; 290        ;
+;     -- <=2 input functions                  ; 64         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 674        ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 24         ;
+; Maximum fan-out node                        ; Address[4] ;
+; Maximum fan-out                             ; 226        ;
+; Total fan-out                               ; 2286       ;
+; Average fan-out                             ; 3.28       ;
++---------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |ROM                       ; 674 (674)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |ROM                ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; Q[0]$latch                                           ; WE                  ; yes                    ;
+; Q[1]$latch                                           ; WE                  ; yes                    ;
+; Q[2]$latch                                           ; WE                  ; yes                    ;
+; Q[3]$latch                                           ; WE                  ; yes                    ;
+; Q[4]$latch                                           ; WE                  ; yes                    ;
+; Q[5]$latch                                           ; WE                  ; yes                    ;
+; Q[6]$latch                                           ; WE                  ; yes                    ;
+; Q[7]$latch                                           ; WE                  ; yes                    ;
+; rom[10][0]                                           ; rom[10][0]          ; yes                    ;
+; rom[26][0]                                           ; rom[26][0]          ; yes                    ;
+; rom[2][0]                                            ; rom[2][0]           ; yes                    ;
+; rom[18][0]                                           ; rom[18][0]          ; yes                    ;
+; rom[12][0]                                           ; rom[12][0]          ; yes                    ;
+; rom[28][0]                                           ; rom[28][0]          ; yes                    ;
+; rom[4][0]                                            ; rom[4][0]           ; yes                    ;
+; rom[20][0]                                           ; rom[20][0]          ; yes                    ;
+; rom[8][0]                                            ; rom[8][0]           ; yes                    ;
+; rom[24][0]                                           ; rom[24][0]          ; yes                    ;
+; rom[0][0]                                            ; rom[0][0]           ; yes                    ;
+; rom[16][0]                                           ; rom[16][0]          ; yes                    ;
+; rom[14][0]                                           ; rom[14][0]          ; yes                    ;
+; rom[30][0]                                           ; rom[30][0]          ; yes                    ;
+; rom[6][0]                                            ; rom[6][0]           ; yes                    ;
+; rom[22][0]                                           ; rom[22][0]          ; yes                    ;
+; rom[13][0]                                           ; rom[13][0]          ; yes                    ;
+; rom[29][0]                                           ; rom[29][0]          ; yes                    ;
+; rom[5][0]                                            ; rom[5][0]           ; yes                    ;
+; rom[21][0]                                           ; rom[21][0]          ; yes                    ;
+; rom[11][0]                                           ; rom[11][0]          ; yes                    ;
+; rom[27][0]                                           ; rom[27][0]          ; yes                    ;
+; rom[3][0]                                            ; rom[3][0]           ; yes                    ;
+; rom[19][0]                                           ; rom[19][0]          ; yes                    ;
+; rom[9][0]                                            ; rom[9][0]           ; yes                    ;
+; rom[25][0]                                           ; rom[25][0]          ; yes                    ;
+; rom[1][0]                                            ; rom[1][0]           ; yes                    ;
+; rom[17][0]                                           ; rom[17][0]          ; yes                    ;
+; rom[15][0]                                           ; rom[15][0]          ; yes                    ;
+; rom[31][0]                                           ; rom[31][0]          ; yes                    ;
+; rom[7][0]                                            ; rom[7][0]           ; yes                    ;
+; rom[23][0]                                           ; rom[23][0]          ; yes                    ;
+; rom[10][1]                                           ; rom[10][0]          ; yes                    ;
+; rom[26][1]                                           ; rom[26][0]          ; yes                    ;
+; rom[2][1]                                            ; rom[2][0]           ; yes                    ;
+; rom[18][1]                                           ; rom[18][0]          ; yes                    ;
+; rom[12][1]                                           ; rom[12][0]          ; yes                    ;
+; rom[28][1]                                           ; rom[28][0]          ; yes                    ;
+; rom[4][1]                                            ; rom[4][0]           ; yes                    ;
+; rom[20][1]                                           ; rom[20][0]          ; yes                    ;
+; rom[8][1]                                            ; rom[8][0]           ; yes                    ;
+; rom[24][1]                                           ; rom[24][0]          ; yes                    ;
+; rom[0][1]                                            ; rom[0][0]           ; yes                    ;
+; rom[16][1]                                           ; rom[16][0]          ; yes                    ;
+; rom[14][1]                                           ; rom[14][0]          ; yes                    ;
+; rom[30][1]                                           ; rom[30][0]          ; yes                    ;
+; rom[6][1]                                            ; rom[6][0]           ; yes                    ;
+; rom[22][1]                                           ; rom[22][0]          ; yes                    ;
+; rom[13][1]                                           ; rom[13][0]          ; yes                    ;
+; rom[29][1]                                           ; rom[29][0]          ; yes                    ;
+; rom[5][1]                                            ; rom[5][0]           ; yes                    ;
+; rom[21][1]                                           ; rom[21][0]          ; yes                    ;
+; rom[11][1]                                           ; rom[11][0]          ; yes                    ;
+; rom[27][1]                                           ; rom[27][0]          ; yes                    ;
+; rom[3][1]                                            ; rom[3][0]           ; yes                    ;
+; rom[19][1]                                           ; rom[19][0]          ; yes                    ;
+; rom[9][1]                                            ; rom[9][0]           ; yes                    ;
+; rom[25][1]                                           ; rom[25][0]          ; yes                    ;
+; rom[1][1]                                            ; rom[1][0]           ; yes                    ;
+; rom[17][1]                                           ; rom[17][0]          ; yes                    ;
+; rom[15][1]                                           ; rom[15][0]          ; yes                    ;
+; rom[31][1]                                           ; rom[31][0]          ; yes                    ;
+; rom[7][1]                                            ; rom[7][0]           ; yes                    ;
+; rom[23][1]                                           ; rom[23][0]          ; yes                    ;
+; rom[10][2]                                           ; rom[10][0]          ; yes                    ;
+; rom[26][2]                                           ; rom[26][0]          ; yes                    ;
+; rom[2][2]                                            ; rom[2][0]           ; yes                    ;
+; rom[18][2]                                           ; rom[18][0]          ; yes                    ;
+; rom[12][2]                                           ; rom[12][0]          ; yes                    ;
+; rom[28][2]                                           ; rom[28][0]          ; yes                    ;
+; rom[4][2]                                            ; rom[4][0]           ; yes                    ;
+; rom[20][2]                                           ; rom[20][0]          ; yes                    ;
+; rom[8][2]                                            ; rom[8][0]           ; yes                    ;
+; rom[24][2]                                           ; rom[24][0]          ; yes                    ;
+; rom[0][2]                                            ; rom[0][0]           ; yes                    ;
+; rom[16][2]                                           ; rom[16][0]          ; yes                    ;
+; rom[14][2]                                           ; rom[14][0]          ; yes                    ;
+; rom[30][2]                                           ; rom[30][0]          ; yes                    ;
+; rom[6][2]                                            ; rom[6][0]           ; yes                    ;
+; rom[22][2]                                           ; rom[22][0]          ; yes                    ;
+; rom[13][2]                                           ; rom[13][0]          ; yes                    ;
+; rom[29][2]                                           ; rom[29][0]          ; yes                    ;
+; rom[5][2]                                            ; rom[5][0]           ; yes                    ;
+; rom[21][2]                                           ; rom[21][0]          ; yes                    ;
+; rom[11][2]                                           ; rom[11][0]          ; yes                    ;
+; rom[27][2]                                           ; rom[27][0]          ; yes                    ;
+; rom[3][2]                                            ; rom[3][0]           ; yes                    ;
+; rom[19][2]                                           ; rom[19][0]          ; yes                    ;
+; rom[9][2]                                            ; rom[9][0]           ; yes                    ;
+; rom[25][2]                                           ; rom[25][0]          ; yes                    ;
+; rom[1][2]                                            ; rom[1][0]           ; yes                    ;
+; rom[17][2]                                           ; rom[17][0]          ; yes                    ;
+; Number of user-specified and inferred latches = 264  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[15][1]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[14][5]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[13][0]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[12][5]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[11][6]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[10][1]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[9][3]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[8][3]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[7][4]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[6][1]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[5][0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[4][0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[3][5]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[2][0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[1][0]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ROM|rom[0][0]             ;
+; 48:1               ; 8 bits    ; 256 LEs       ; 208 LEs              ; 48 LEs                 ; No         ; |ROM|Mux7                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ROM ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Dec 08 16:22:16 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ROM -c ROM
+Info: Found 1 design units, including 1 entities, in source file rom.v
+    Info: Found entity 1: ROM
+Info: Found 1 design units, including 1 entities, in source file rom_tb.v
+    Info: Found entity 1: ROM_tb
+Info: Elaborating entity "ROM" for the top level hierarchy
+Critical Warning (10237): Verilog HDL warning at ROM.v(39): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Warning (10240): Verilog HDL Always Construct warning at ROM.v(13): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Q[0]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[1]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[2]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[3]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[4]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[5]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[6]" at ROM.v(13)
+Info (10041): Inferred latch for "Q[7]" at ROM.v(13)
+Info (10041): Inferred latch for "rom[0][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[1][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[2][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[3][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[4][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[5][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[6][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[7][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[8][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[9][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[10][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[11][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[12][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[13][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[14][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[15][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[16][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[17][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[18][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[19][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[20][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[21][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[22][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[23][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[24][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[25][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[26][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[27][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[28][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[29][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[30][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][0]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][1]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][2]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][3]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][4]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][5]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][6]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[31][7]" at ROM.v(39)
+Warning: Latch rom[10][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[10][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[2][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[12][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[4][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[8][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[0][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[14][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[6][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[13][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[5][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[11][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[3][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[9][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[1][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[15][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Warning: Latch rom[7][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal WE
+Info: Generated suppressed messages file C:/Users/Student/Desktop/Enhanced Processor/ROM/ROM.map.smsg
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock"
+Info: Implemented 698 device resources after synthesis - the final resource count might be different
+    Info: Implemented 16 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 674 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 261 warnings
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Tue Dec 08 16:22:20 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Student/Desktop/Enhanced Processor/ROM/ROM.map.smsg.
+
+

@@ -1,0 +1,57 @@
+module ROM_tb();
+
+reg clk,WE;
+reg [4:0]Address;
+reg [7:0]D;
+reg initialize;
+wire [7:0]Q;
+
+ROM #(.n(8)) ROM1(clk,WE,Address,initialize,D,Q);
+/*
+initial 
+ begin 
+   WE <= 0;
+   @(posedge clk);
+   @(negedge clk);
+   clear <= 1;
+ end 
+*/
+initial 
+ begin 
+ #2 WE = 0; Address = 4'b00000; initialize = 1; D = 8'b00000000; 
+ #2 WE = 0; Address = 4'b00000; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00001; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00010; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00011; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00100; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00101; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00110; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b00111; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01001; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01010; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01011; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01100; initialize = 0 ;D = 8'bxxxxxxxx; 
+ #2 WE = 0; Address = 4'b01101; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01110; initialize = 0 ;D = 8'bxxxxxxxx;
+ #2 WE = 0; Address = 4'b01110; initialize = 0 ;D = 8'bxxxxxxxx;
+ 
+ #2 $finish;
+ end 
+
+initial 
+  begin 
+   clk = 0;
+   forever #1 clk = ~clk;
+  end 
+
+
+
+
+initial 
+   begin 
+    $display(" clk |WE| Address | initialize | D  |  Q  |\n");
+    $monitor("  %b  |  %b  |  %b  |    %b     | %b  |  %b  |", clk,WE,Address,initialize,D,Q);   
+   end 
+
+
+endmodule 

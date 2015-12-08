@@ -55,18 +55,18 @@ initial
   #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 1; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 7;   
  
   //reset
-  clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; @(posedge clk);
-   @(negedge clk);  clear <= 1;   
+  #2 clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; 
+  #2 clear <= 1;   
   // state:1000(load)
   #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 2; Aload = 1; Sub = 0;  in = 0; //correct 
   // state:1001(store)
-  clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; @(posedge clk);
-   @(negedge clk);  clear <= 1;   
+  #2 clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0;
+  #2 clear <= 1;   
   #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 1; MemWr = 1; Asel = 0; Aload = 0; Sub = 0;  in = 0; //correct 
   #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 1; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; //correct 
   // state:1010(add) 
-    clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; @(posedge clk);
-   @(negedge clk);  clear <= 1;   
+  #2 clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0;
+  #2 clear <= 1;   
   #2 IRload = 0; JMPmux = 1; PCload = 0; Meminst = 1; MemWr = 0; Asel = 1; Aload = 1; Sub = 0;  in = 3;
   #2 IRload = 0; JMPmux = 1; PCload = 0; Meminst = 1; MemWr = 1; Asel = 1; Aload = 0; Sub = 0;  in = 3;
   #2 IRload = 0; JMPmux = 1; PCload = 0; Meminst = 1; MemWr = 0; Asel = 1; Aload = 0; Sub = 0;  in = 3; 
