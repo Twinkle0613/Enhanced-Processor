@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Tue Dec 08 17:22:35 2015
+Tue Dec 15 15:55:18 2015
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -59,13 +59,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 08 17:22:35 2015   ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 15 15:55:18 2015   ;
 ; Quartus II Version                 ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name                      ; Processor                               ;
 ; Top-level Entity Name              ; Processor                               ;
 ; Family                             ; Cyclone II                              ;
-; Total logic elements               ; 721                                     ;
-;     Total combinational functions  ; 720                                     ;
+; Total logic elements               ; 764                                     ;
+;     Total combinational functions  ; 763                                     ;
 ;     Dedicated logic registers      ; 24                                      ;
 ; Total registers                    ; 24                                      ;
 ; Total pins                         ; 47                                      ;
@@ -189,16 +189,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 721                    ;
+; Estimated Total logic elements              ; 764                    ;
 ;                                             ;                        ;
-; Total combinational functions               ; 720                    ;
+; Total combinational functions               ; 763                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 336                    ;
-;     -- 3 input functions                    ; 327                    ;
-;     -- <=2 input functions                  ; 57                     ;
+;     -- 4 input functions                    ; 366                    ;
+;     -- 3 input functions                    ; 333                    ;
+;     -- <=2 input functions                  ; 64                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 709                    ;
+;     -- normal mode                          ; 752                    ;
 ;     -- arithmetic mode                      ; 11                     ;
 ;                                             ;                        ;
 ; Total registers                             ; 24                     ;
@@ -207,9 +207,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                        ;
 ; I/O pins                                    ; 47                     ;
 ; Maximum fan-out node                        ; CU:CU1|CurrState.store ;
-; Maximum fan-out                             ; 157                    ;
-; Total fan-out                               ; 2562                   ;
-; Average fan-out                             ; 3.24                   ;
+; Maximum fan-out                             ; 189                    ;
+; Total fan-out                               ; 2714                   ;
+; Average fan-out                             ; 3.25                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -218,16 +218,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                    ; Library Name ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
-; |Processor                             ; 720 (0)           ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |Processor                                                             ; work         ;
+; |Processor                             ; 763 (0)           ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |Processor                                                             ; work         ;
 ;    |CU:CU1|                            ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|CU:CU1                                                      ; work         ;
-;    |DataPath:DP1|                      ; 716 (0)           ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1                                                ;              ;
-;       |InstructionCycleOperations:ICO| ; 15 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionCycleOperations:ICO                 ;              ;
+;    |DataPath:DP1|                      ; 759 (0)           ; 19 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1                                                ;              ;
+;       |InstructionCycleOperations:ICO| ; 15 (0)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionCycleOperations:ICO                 ; work         ;
 ;          |MUX_2_To_1:Memi|             ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionCycleOperations:ICO|MUX_2_To_1:Memi ; work         ;
 ;          |Register:IR|                 ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionCycleOperations:ICO|Register:IR     ; work         ;
 ;          |Register:PC|                 ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionCycleOperations:ICO|Register:PC     ; work         ;
 ;       |InstructionSetOperations:ISO|   ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionSetOperations:ISO                   ; work         ;
 ;          |Register:regA|               ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|InstructionSetOperations:ISO|Register:regA     ; work         ;
-;       |ROM:romA|                       ; 693 (693)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|ROM:romA                                       ; work         ;
+;       |ROM:romA|                       ; 736 (736)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|DataPath:DP1|ROM:romA                                       ; work         ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -401,23 +401,27 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[31][5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[30][3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[17][6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[16][0] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[15][5] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[14][0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[13][3] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[12][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[11][5] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[10][2] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[9][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[8][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[7][6]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[6][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[5][3]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[4][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[3][2]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[2][4]  ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[1][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[13][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[12][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[11][0] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[10][4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[9][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[8][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[7][2]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[6][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[5][5]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[4][3]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[3][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[2][0]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[1][6]  ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Processor|DataPath:DP1|ROM:romA|rom[0][6]  ;
-; 48:1               ; 8 bits    ; 256 LEs       ; 208 LEs              ; 48 LEs                 ; No         ; |Processor|DataPath:DP1|ROM:romA|Mux0       ;
+; 52:1               ; 8 bits    ; 272 LEs       ; 232 LEs              ; 40 LEs                 ; No         ; |Processor|DataPath:DP1|ROM:romA|Mux7       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -576,7 +580,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Dec 08 17:22:32 2015
+    Info: Processing started: Tue Dec 15 15:55:11 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Info: Found 1 design units, including 1 entities, in source file register.v
     Info: Found entity 1: Register
@@ -623,7 +627,7 @@ Info: Elaborating entity "Register" for hierarchy "DataPath:DP1|InstructionCycle
 Info: Elaborating entity "Increment" for hierarchy "DataPath:DP1|InstructionCycleOperations:ICO|Increment:Inc1"
 Warning (10230): Verilog HDL assignment warning at Increment.v(8): truncated value with size 32 to match size of target (5)
 Info: Elaborating entity "ROM" for hierarchy "DataPath:DP1|ROM:romA"
-Critical Warning (10237): Verilog HDL warning at ROM.v(39): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
+Critical Warning (10237): Verilog HDL warning at ROM.v(49): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
 Warning (10240): Verilog HDL Always Construct warning at ROM.v(13): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "Q[0]" at ROM.v(13)
 Info (10041): Inferred latch for "Q[1]" at ROM.v(13)
@@ -633,262 +637,262 @@ Info (10041): Inferred latch for "Q[4]" at ROM.v(13)
 Info (10041): Inferred latch for "Q[5]" at ROM.v(13)
 Info (10041): Inferred latch for "Q[6]" at ROM.v(13)
 Info (10041): Inferred latch for "Q[7]" at ROM.v(13)
-Info (10041): Inferred latch for "rom[0][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[0][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[1][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[2][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[3][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[4][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[5][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[6][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[7][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[8][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[9][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[10][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[11][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[12][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[13][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[14][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[15][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[16][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[17][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[18][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[19][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[20][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[21][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[22][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[23][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[24][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[25][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[26][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[27][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[28][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[29][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[30][7]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][0]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][1]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][2]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][3]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][4]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][5]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][6]" at ROM.v(39)
-Info (10041): Inferred latch for "rom[31][7]" at ROM.v(39)
+Info (10041): Inferred latch for "rom[0][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[0][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[1][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[2][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[3][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[4][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[5][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[6][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[7][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[8][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[9][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[10][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[11][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[12][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[13][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[14][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[15][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[16][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[17][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[18][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[19][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[20][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[21][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[22][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[23][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[24][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[25][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[26][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[27][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[28][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[29][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[30][7]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][0]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][1]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][2]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][3]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][4]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][5]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][6]" at ROM.v(49)
+Info (10041): Inferred latch for "rom[31][7]" at ROM.v(49)
 Warning: Using design file instructionsetoperations.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: InstructionSetOperations
 Info: Elaborating entity "InstructionSetOperations" for hierarchy "DataPath:DP1|InstructionSetOperations:ISO"
@@ -916,7 +920,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -932,7 +940,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -948,7 +960,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -964,7 +980,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][1] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -980,7 +1000,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -996,7 +1020,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][2] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1012,7 +1040,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1028,7 +1060,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1044,7 +1080,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1060,7 +1100,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1076,7 +1120,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1092,7 +1140,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][5] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1108,7 +1160,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1124,7 +1180,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][6] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1140,7 +1200,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[8][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[0][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[16][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[14][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[30][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[6][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1156,7 +1220,11 @@ Warning: Latch DataPath:DP1|ROM:romA|rom[9][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[1][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[17][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[15][7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
+Warning: Latch DataPath:DP1|ROM:romA|rom[31][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
 Warning: Latch DataPath:DP1|ROM:romA|rom[7][7] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal CU:CU1|CurrState.store
@@ -1182,15 +1250,15 @@ Warning: Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "in[6]"
     Warning (15610): No output dependent on input pin "in[7]"
     Warning (15610): No output dependent on input pin "enter"
-Info: Implemented 774 device resources after synthesis - the final resource count might be different
+Info: Implemented 817 device resources after synthesis - the final resource count might be different
     Info: Implemented 12 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 727 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 295 warnings
-    Info: Peak virtual memory: 199 megabytes
-    Info: Processing ended: Tue Dec 08 17:22:35 2015
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Implemented 770 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 359 warnings
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Tue Dec 15 15:55:18 2015
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +------------------------------------------+

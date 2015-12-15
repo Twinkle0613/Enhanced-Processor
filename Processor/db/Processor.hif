@@ -190,48 +190,6 @@ DataPath:DP1|InstructionCycleOperations:ICO|Increment:Inc1
 
 # end
 # entity
-ROM
-# storage
-db|Processor.(7).cnf
-db|Processor.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-rom.v
-d52b9afe1aa327ac24dc40c58a7c5ae5
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# user_parameter {
-n
-8
-PARAMETER_SIGNED_DEC
-USR
-}
-# hierarchies {
-DataPath:DP1|ROM:romA
-}
-# macro_sequence
-
-# end
-# entity
 InstructionSetOperations
 # storage
 db|Processor.(8).cnf
@@ -543,6 +501,48 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 DataPath:DP1|InstructionCycleOperations:ICO
+}
+# macro_sequence
+
+# end
+# entity
+ROM
+# storage
+db|Processor.(7).cnf
+db|Processor.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+rom.v
+8f2269d5a33cb30174ac3125d78de9d
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+n
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+DataPath:DP1|ROM:romA
 }
 # macro_sequence
 

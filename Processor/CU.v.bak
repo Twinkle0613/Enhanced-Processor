@@ -1,36 +1,30 @@
-module CU(
-	input CLOCK_50,
-	input [0:0]KEY,
-	input [6:0]SW,
-	output [9:0]LEDR,
-	output [4:0]LEDG
-	);
+module CU(clk,reset,Enter,Aeq0,Apos,IR,IRload,JMPmux,PCload,Meminst,MenWr,Asel,Aload,Sub,Halt,DisplayState);
+
+	input clk,reset,Enter,Aeq0,Apos;
+	input [2:0]IR;
+	output reg IRload,JMPmux,PCload,Meminst,MenWr,Aload,Sub,Halt;
+	output reg [1:0]Asel;
+	output reg [3:0]DisplayState;
 	
-	wire reset,Enter,Aeq0,Apos,ClOCK_1S;
-	wire [2:0]IR;
-	reg IRload,JMPmux,PCload,Meminst,MenWr,Aload,Sub,Halt;
-	reg [1:0]Asel;
-	wire [3:0]DisplayState;
+	//assign reset = KEY[0];
+	//assign Enter = SW[5];                           
+	//assign Aeq0 = SW[4];
+	//assign Apos = SW[3];
+	//assign IR = SW[2:0];
 	
-	assign reset = KEY[0];
-	assign Enter = SW[5];                           
-	assign Aeq0 = SW[4];
-	assign Apos = SW[3];
-	assign IR = SW[2:0];
-	
-	assign LEDR[9] = IRload ;
-	assign LEDR[8] = JMPmux ;
-	assign LEDR[7] = PCload ;
-	assign LEDR[6] = Meminst ;
-	assign LEDR[5] = MenWr;
-	assign LEDR[4] = Aload;
-	assign LEDR[3] = Sub;                                                                                          
-	assign LEDR[2] = Halt;
-	assign LEDR[1:0] = Asel;
-	assign LEDG[3:0] = DisplayState;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+	//assign LEDR[9] = IRload ;
+	//assign LEDR[8] = JMPmux ;
+	//assign LEDR[7] = PCload ;
+	//assign LEDR[6] = Meminst ;
+	//assign LEDR[5] = MenWr;
+	//assign LEDR[4] = Aload;
+	//assign LEDR[3] = Sub;                                                                                          
+	//assign LEDR[2] = Halt;
+	//assign LEDR[1:0] = Asel;
+	//assign LEDG[3:0] = DisplayState;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 	
 	
-oneSecClock(CLOCK_50,reset,ClOCK_1S);
+//oneSecClock(CLOCK_50,reset,ClOCK_1S);
 	
 parameter start = 4'b0000, fetch = 4'b0001, decode = 4'b0010;
 parameter load = 4'b1000, store = 4'b1001, add = 4'b1010, sub = 4'b1011;
@@ -40,8 +34,7 @@ reg [3:0] NextState,CurrState;
 assign DisplayState = CurrState;
 // ******START THE PROGRAM********
 
-
-always@(posedge ClOCK_1S, negedge reset) //asynchronous clock and reset.
+always@(posedge clk, negedge reset) //asynchronous clock and reset.
 	if(!reset)
 		CurrState <= start;		//if reset is active, the CurrState will stand in 'start'.
 	else

@@ -1,4 +1,4 @@
-module ROM(clock,WE,Address,initialize,D,Q);
+ module ROM(clock,WE,Address,initialize,D,Q);
     parameter n = 8;
 	input clock;
 	input WE;
@@ -10,27 +10,36 @@ module ROM(clock,WE,Address,initialize,D,Q);
 reg [7:0]rom[31:0];
 reg [4:0]addr_reg;
   
-always@ (posedge clock,posedge WE ,posedge initialize )
+always@ (posedge clock )
 begin 
 
  if(initialize)
  begin 
- rom[5'b00000] = 8'h00;
- rom[5'b00001] = 8'h01;
- rom[5'b00010] = 8'h02;
- rom[5'b00011] = 8'h03;
- rom[5'b00100] = 8'h04;
- rom[5'b00101] = 8'h05;
- rom[5'b00110] = 8'h06;
- rom[5'b00111] = 8'h07;
- rom[5'b01000] = 8'h08;
- rom[5'b01001] = 8'h09;
- rom[5'b01010] = 8'h0a;
- rom[5'b01011] = 8'h0b;
- rom[5'b01100] = 8'h0c;
- rom[5'b01101] = 8'h0d;
- rom[5'b01110] = 8'h0e;
- rom[5'b01111] = 8'h0f;
+ rom[5'b00000] = 8'b10000000;
+ rom[5'b00001] = 8'b00111110;
+ rom[5'b00010] = 8'b10000000;
+ rom[5'b00011] = 8'b00111111;
+ 
+ rom[5'b00100] = 8'b00011110;
+ rom[5'b00101] = 8'b01111111;
+ rom[5'b00110] = 8'b10110000;
+ rom[5'b00111] = 8'b11001100;
+ 
+ rom[5'b01000] = 8'b00011111;
+ rom[5'b01001] = 8'b01111110;
+ rom[5'b01010] = 8'b00111111;
+ rom[5'b01011] = 8'b11000100;
+ 
+ rom[5'b01100] = 8'b00011110;
+ rom[5'b01101] = 8'b01111111;
+ rom[5'b01110] = 8'b00111110;
+ rom[5'b01111] = 8'b11000100;
+ 
+ rom[5'b10000] = 8'b00011110;
+ rom[5'b10001] = 8'b11111111;
+ 
+ rom[5'b11110] = 8'b00000000;
+ rom[5'b11111] = 8'b00000000;
  end
 
  if(WE)

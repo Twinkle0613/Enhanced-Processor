@@ -1,10 +1,10 @@
-module CU(clk,reset,Enter,Aeq0,Apos,IR,IRload,JMPmux,PCload,Meminst,MenWr,Asel,Aload,Sub,Halt);
+module CU(clk,reset,Enter,Aeq0,Apos,IR,IRload,JMPmux,PCload,Meminst,MenWr,Asel,Aload,Sub,Halt,DisplayState);
 
 	input clk,reset,Enter,Aeq0,Apos;
 	input [2:0]IR;
 	output reg IRload,JMPmux,PCload,Meminst,MenWr,Aload,Sub,Halt;
 	output reg [1:0]Asel;
-	//wire [3:0]DisplayState;
+	output [3:0]DisplayState;
 	
 	//assign reset = KEY[0];
 	//assign Enter = SW[5];                           

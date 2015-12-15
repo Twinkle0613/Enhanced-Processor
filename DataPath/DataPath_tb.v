@@ -77,7 +77,7 @@ initial
   #2 IRload = 0; JMPmux = 1; PCload = 0; Meminst = 1; MemWr = 0; Asel = 1; Aload = 0; Sub = 0;  in = 3; 
   #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 1; Sub = 1;  in = 7; //correct  #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 1; Sub = 1;  in = 7; //correct 
   // state:1100(input) 
-  #2 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 1; Aload = 1; Sub = 0;  in = 7; //correct 
+  #4 IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 1; Aload = 1; Sub = 0;  in = 7; //correct 
   // state:1101(jz) 
   #1 clear <= 0; IRload = 0; JMPmux = 0; PCload = 0; Meminst = 0; MemWr = 0; Asel = 0; Aload = 0; Sub = 0;  in = 0; 
   #1 clear <= 1;   
