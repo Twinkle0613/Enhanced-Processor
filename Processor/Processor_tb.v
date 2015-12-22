@@ -4,10 +4,10 @@ module Processor_tb();
  reg [7:0]in;
  wire [7:0]out;
  wire halt;
- wire [4:0]MeminstOut;
- wire [7:0]regAOut,RAMout;
- wire [4:0]IR40;
- wire [2:0]IR75;
+ //wire [4:0]MeminstOut;
+ //wire [7:0]regAOut,RAMout;
+ //wire [4:0]IR40;
+ //wire [2:0]IR75;
  wire [3:0]DisplayState;
 
 
@@ -15,7 +15,8 @@ reg [7:0]expectValue,X,Y;
 integer i;
 integer errors = 0;
 integer pass = 0;
-Processor Up(clk,reset,init,enter,in,out,halt,IR40,MeminstOut,regAOut,RAMout,DisplayState,IR75);
+Processor Up(clk,reset,init,enter,in,out,halt,DisplayState);
+//Processor Up(clk,reset,init,enter,in,out,halt,IR40,MeminstOut,regAOut,RAMout,DisplayState,IR75);
 
 initial 
  begin 
@@ -39,15 +40,6 @@ task resetProcessor;
 endtask 
 
 initial 
- begin 
-  //  $display("| clk | reset | init | enter |  in  |  out | halt |  IR40  | MeminstOut |  regAOut |  RAMout  | DisplayState | IR75 |");
- //   $monitor("|  %b  |   %b   |  %b   |   %b   | %d  | %d |  %b  |  %b |   %b    | %b | %b |     %b     | %b |",
- // clk,reset,init,enter,in,out,halt,IR40,MeminstOut,regAOut,RAMout,DisplayState,IR75); 
-  // $display("| X | Y |");
-
-   end 
-
-initial 
 	begin
   in <= 0; enter <= 0; expectValue <= 0;
   #2 autoChecking();	
@@ -60,17 +52,13 @@ task autoChecking;
    begin 
     resetProcessor();
     X = {$random}%128; Y = {$random}%128;
-    
     while(X == 0) begin X = ({$random} % 128); end
-    while(Y == 0) begin Y = ({$random} % 128); end //restart();
-   // $display("X = %d , Y = %d",X,Y);
+    while(Y == 0) begin Y = ({$random} % 128); end 
     inputXandY(X,Y);
     AlgorithmChecking(X,Y);
 
    end 
 endtask
-  
-
   
 task inputXandY;
   input [7:0]X,Y;
