@@ -40,9 +40,9 @@ endtask
 
 initial 
  begin 
-    $display("| clk | reset | init | enter |    in    |    out   | halt |  IR40  | MeminstOut |  regAOut |  RAMout  | DisplayState | IR75 |");
-  /$monitor("|  %b  |   %b  |   %b   |   %b   | %d | %d |   %b  |  %b |   %b    | %b | %b |     %b     | %b |",
-   clk,reset,init,enter,in,out,halt,IR40,MeminstOut,regAOut,RAMout,DisplayState,IR75); 
+  //  $display("| clk | reset | init | enter |  in  |  out | halt |  IR40  | MeminstOut |  regAOut |  RAMout  | DisplayState | IR75 |");
+ //   $monitor("|  %b  |   %b   |  %b   |   %b   | %d  | %d |  %b  |  %b |   %b    | %b | %b |     %b     | %b |",
+ // clk,reset,init,enter,in,out,halt,IR40,MeminstOut,regAOut,RAMout,DisplayState,IR75); 
   // $display("| X | Y |");
 
    end 
@@ -56,14 +56,14 @@ initial
 
   
 task autoChecking;
- for(i = 0 ; i <2 ; i= i+1)
+ for(i = 0 ; i <100 ; i= i+1)
    begin 
     resetProcessor();
     X = {$random}%128; Y = {$random}%128;
     
     while(X == 0) begin X = ({$random} % 128); end
     while(Y == 0) begin Y = ({$random} % 128); end //restart();
-    $display("X = %d , Y = %d",X,Y);
+   // $display("X = %d , Y = %d",X,Y);
     inputXandY(X,Y);
     AlgorithmChecking(X,Y);
 
@@ -84,14 +84,13 @@ endtask
 
 task verifyOutput;
  input[7:0] expValue;
- input[7:0] actValue;
 begin 
-  $display("CP4");
+ // $display("CP4");
  while(!halt) #1;
- if(actValue != expValue)
+ if(out != expValue)
    begin
     errors = errors + 1;
-    $display("expected %d was %d , error collection is %d at %d",expValue,actValue,errors,$time);
+    $display("expected %d was %d , error collection is %d at %d",expValue,out,errors,$time);
    end 
 else 
    begin 
@@ -110,9 +109,9 @@ task AlgorithmChecking;
 	     X = X - Y;
 	   else 
 	     Y = Y - X;
-     $display("| X = %d | Y = %d |",X,Y);
+     //$display("| X = %d | Y = %d |",X,Y);
     end 
-    verifyOutput(X,out);
+    verifyOutput(X);
  end 
 endtask 
 
