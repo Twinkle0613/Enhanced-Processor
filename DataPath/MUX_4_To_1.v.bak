@@ -6,7 +6,7 @@ module MUX_4_To_1(intA,intB,intC,intD,Sel,Out);
 
 
 
-always @(Sel,intA,intB,intC,intD)
+always @(Sel,intA,intB,intC,intb)
 begin 
 case(Sel)
 2'b00:Out = intA;

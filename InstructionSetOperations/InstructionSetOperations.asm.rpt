@@ -1,5 +1,5 @@
 Assembler report for InstructionSetOperations
-Mon Nov 16 17:44:14 2015
+Sat Dec 19 00:06:42 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.sof
-  6. Assembler Device Options: C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.pof
+  5. Assembler Device Options: C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.sof
+  6. Assembler Device Options: C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 16 17:44:14 2015 ;
+; Assembler Status      ; Successful - Sat Dec 19 00:06:42 2015 ;
 ; Revision Name         ; InstructionSetOperations              ;
 ; Top-level Entity Name ; InstructionSetOperations              ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------+
-; C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.sof ;
-; C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.pof ;
-+--------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                         ;
++---------------------------------------------------------------------------------------------------+
+; File Name                                                                                         ;
++---------------------------------------------------------------------------------------------------+
+; C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.sof ;
+; C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.pof ;
++---------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                     ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C20F484C7                                                                                                                ;
-; JTAG usercode  ; 0x001B8E2F                                                                                                                  ;
-; Checksum       ; 0x001B8E2F                                                                                                                  ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.sof ;
++----------------+------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                    ;
++----------------+------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                                                               ;
+; JTAG usercode  ; 0x001B7A5F                                                                                                 ;
+; Checksum       ; 0x001B7A5F                                                                                                 ;
++----------------+------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/twinkle/Desktop/ASIC and FPGA design BAME2044/LAB 2/InstructionSetOperations/InstructionSetOperations.pof ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                 ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                                                  ;
-; JTAG usercode      ; 0x00000000                                                                                                              ;
-; Checksum           ; 0x1DD7B950                                                                                                              ;
-; Compression Ratio  ; 3                                                                                                                       ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/twinkle/Desktop/Enhanced-Processor/InstructionSetOperations/InstructionSetOperations.pof ;
++--------------------+--------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                ;
++--------------------+--------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                                 ;
+; JTAG usercode      ; 0x00000000                                                                                             ;
+; Checksum           ; 0x1DD842C8                                                                                             ;
+; Compression Ratio  ; 3                                                                                                      ;
++--------------------+--------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 16 17:44:11 2015
+    Info: Processing started: Sat Dec 19 00:06:33 2015
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off InstructionSetOperations -c InstructionSetOperations
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 437 megabytes
-    Info: Processing ended: Mon Nov 16 17:44:15 2015
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 438 megabytes
+    Info: Processing ended: Sat Dec 19 00:06:42 2015
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 
